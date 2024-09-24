@@ -1,4 +1,4 @@
-export function Catalog() {
+export default function Catalog() {
 
     return (
         <>
