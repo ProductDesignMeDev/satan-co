@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 /* Estilos globales - Sacar lineas blancas divisoras
-body{
+
+   */
+   body{
   background-color: #2A1540;
 }
-   */
