@@ -47,7 +47,7 @@ export default function Navbar() {
             QUIÉNES SOMOS
           </Link>
           <Link href="/Faq" className="hover:text-gray-400">
-            FAQ&apos;S {/* Comillas escapadas */}
+            FAQ&apos;S
           </Link>
         </div>
       </div>
