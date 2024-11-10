@@ -1,6 +1,9 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from "next";
 import "./globals.css";
 import { Footer, Navbar } from "@/components";
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,6 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Space+Grotesk:wght@300..700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>
         <div>
           <Navbar />
