@@ -1,7 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { Logo, IconInstagram, NubesMobileMenu } from "@/public";
+import {
+  Logo,
+  IconInstagram,
+  HumoFooterDerecha,
+  HumoFooterIzquierda,
+} from "@/public";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi"; // Íconos para el menú
 import Link from "next/link"; // Importar Link de Next.js
 import { usePathname } from "next/navigation";
@@ -36,7 +41,9 @@ export default function Navbar() {
   return (
     <main
       className={`${
-        isScrolled ? "lg:bg-opacity-60 lg:backdrop-blur-md bg-background" : "bg-background"
+        isScrolled
+          ? "lg:bg-opacity-60 lg:backdrop-blur-md bg-background"
+          : "bg-background"
       } text-white lg:h-24 h-16 fixed w-full transition-all duration-300`}
     >
       <div className="flex items-center justify-between h-full lg:ml-24 lg:mr-24 px-4 lg:px-0">
@@ -121,8 +128,8 @@ export default function Navbar() {
 
       {/* Menú desplegable en móvil */}
       {isOpen && (
-        <div className="lg:hidden absolute lg:top-24 top-[63px] left-0 w-full bg-backgroundgradiant text-white flex flex-col space-y-4 py-6 text-left z-50 mt-[-1px]">
-          <div className="ml-8 h-screen text-[32px] font-medium leading-10 flex flex-col space-y-4 pt-16">
+        <div className="lg:hidden absolute lg:top-24 top-[63px] left-0 w-full bg-backgroundgradiant text-white flex flex-col space-y-4 py-6 text-left mt-[-1px]">
+          <div className="ml-8 h-screen z-50 text-[32px] font-medium leading-10 flex flex-col space-y-4 pt-16">
             <Link
               href="/Catalog"
               className="hover:text-gray-400"
@@ -171,14 +178,25 @@ export default function Navbar() {
           </div>
 
           {/* Imagen fija en el fondo del menú */}
-          <div>
-            <Image
-              src={NubesMobileMenu}
-              alt="NubeFooterDerecha"
-              width={0}
-              height={0}
-              className="absolute bottom-0 right-0 z-10 mb-32"
-            />
+          <div className="flex flex-row justify-between ">
+            <div>
+              <Image
+                src={HumoFooterIzquierda}
+                alt="NubeFooterDerecha"
+                width={200}
+                height={152}
+                className="absolute bottom-[-3px] left-[-13px] z-10 mb-32"
+              />
+            </div>
+            <div>
+              <Image
+                src={HumoFooterDerecha}
+                alt="NubeFooterDerecha"
+                width={200}
+                height={152}
+                className="absolute bottom-[-3px] right-0 z-10 mb-32"
+              />
+            </div>
           </div>
         </div>
       )}
