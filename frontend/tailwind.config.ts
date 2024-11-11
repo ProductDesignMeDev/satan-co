@@ -15,6 +15,7 @@ const config: Config = {
       colors: {
         background: "#2A1540",
         foreground: "var(--foreground)",
+        borderpink: "#e05bff",
         prymary1: "#2A1540",
         primary2: "#7600AB",
         primary3: "#E05BFF",
