@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer
       role="contentinfo"
-      className="bg-background text-white w-full relative z-0"
+      className="bg-background text-white w-full relative  h-[340px]"
     >
       {/* Contenido del footer */}
      Footer
