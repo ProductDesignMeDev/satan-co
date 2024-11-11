@@ -36,7 +36,7 @@ export default function Navbar() {
   return (
     <main
       className={`${
-        isScrolled ? "bg-opacity-60 backdrop-blur-md" : "bg-background"
+        isScrolled ? "lg:bg-opacity-60 lg:backdrop-blur-md bg-background" : "bg-background"
       } text-white lg:h-24 h-16 fixed w-full transition-all duration-300`}
     >
       <div className="flex items-center justify-between h-full lg:ml-24 lg:mr-24 px-4 lg:px-0">

@@ -8,3 +8,4 @@ export { default as IconInstagram } from "./IconInstagram.png";
 export { default as Plantita } from "./Plantita.jpg";
 export { default as Error404 } from "./Error404.svg";
 export { default as FlechaIzquierda } from "./FlechaIzquierda.svg";
+export { default as IconCannabis } from "./IconCannabis.svg";
