@@ -1,6 +1,5 @@
-import { HomeCard, Wrapper } from "@/components";
-import Image from "next/image";
-import { Banner } from "@/public";
+import { Wrapper } from "@/components";
+
 export default function Home() {
   return (
     <Wrapper >
