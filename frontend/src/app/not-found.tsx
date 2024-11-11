@@ -12,9 +12,9 @@ export default function NotFound() {
           Página no encontrada
         </div>
         <div className="text-xl font-normal lg:mb-11">
-  <span>Esta página no existe o fue eliminada. Te</span> <br />
-  <span>sugerimos que vuelvas al inicio.</span>
-</div>
+          <span>Esta página no existe o fue eliminada. Te</span> <br />
+          <span>sugerimos que vuelvas al inicio.</span>
+        </div>
         <Link href="/">
           <div className="w-[180px] h-12 bg-white rounded-[20px] flex items-center justify-center text-center">
             <div className="text-[#2a1540] text-sm font-normal flex flex-row items-center justify-center text-center space-x-2">

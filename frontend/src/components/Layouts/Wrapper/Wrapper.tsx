@@ -6,7 +6,7 @@ interface WrapperProps {
 
 const Wrapper: React.FC<WrapperProps> = ({ children }) => {
   return (
-    <main className="bg-background h-screen pt-24">
+    <main className="bg-background pt-24">
       <div className="ml-4 mr-4 lg:ml-24 lg:mr-24">{children}</div>
     </main>
   );
