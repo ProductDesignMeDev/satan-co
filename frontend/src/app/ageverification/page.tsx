@@ -126,7 +126,10 @@ const AgeVerification = () => {
             </div>
           </div>
           <div className="w-[30px] h-[30px] relative" />
-          <button onClick={() => handleAgeVerification(false)} className="absolute ml-60 lg:block hidden">
+          <button
+            onClick={() => handleAgeVerification(false)}
+            className="absolute ml-60 lg:block hidden"
+          >
             <HiOutlineX size={24} />
           </button>
         </div>
