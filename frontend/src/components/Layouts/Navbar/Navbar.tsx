@@ -6,6 +6,8 @@ import {
   IconInstagram,
   HumoFooterDerecha,
   HumoFooterIzquierda,
+  HumoMenuMobileDerecha,
+  HumoMenuMobileIzquierda,
 } from "@/public";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi"; // Íconos para el menú
 import Link from "next/link"; // Importar Link de Next.js
@@ -40,12 +42,12 @@ export default function Navbar() {
 
   return (
     <main
-      className={`${
-        isScrolled
-          ? "lg:bg-opacity-60 lg:backdrop-blur-md bg-background"
-          : "bg-background"
-      } text-white lg:h-24 h-16 fixed w-full transition-all duration-300`}
-    >
+   className={`${
+     isScrolled
+       ? "lg:bg-opacity-60 lg:backdrop-blur-md bg-background"
+       : "bg-background"
+   } text-white lg:h-24 h-16 fixed w-full transition-all duration-300 z-50`} // Añadir z-50 aquí
+>
       <div className="flex items-center justify-between h-full lg:ml-24 lg:mr-24 px-4 lg:px-0">
         {/* Logo */}
         <div className="flex items-center">
@@ -175,29 +177,30 @@ export default function Navbar() {
                 © 2024 Satan&Co X Product Design Me
               </p>
             </div>
+             {/* Imagen fija en el fondo del menú */}
+          <div className="flex flex-row justify-between   ">
+            <div>
+              <Image
+                src={HumoMenuMobileIzquierda}
+                alt="NubeFooterDerecha"
+                width={324}
+                height={138}
+                className="absolute bottom-[-3px] left-[-13px] z-10 mb-28 sm:mb-0"
+              />
+            </div>
+            <div>
+              <Image
+                src={HumoMenuMobileDerecha}
+                alt="NubeFooterDerecha"
+                width={324}
+                height={138}
+                className="absolute bottom-[-3px] right-0 z-10 mb-28 sm:mb-0"
+              />
+            </div>
+          </div>
           </div>
 
-          {/* Imagen fija en el fondo del menú */}
-          <div className="flex flex-row justify-between ">
-            <div>
-              <Image
-                src={HumoFooterIzquierda}
-                alt="NubeFooterDerecha"
-                width={200}
-                height={152}
-                className="absolute bottom-[-3px] left-[-13px] z-10 mb-32"
-              />
-            </div>
-            <div>
-              <Image
-                src={HumoFooterDerecha}
-                alt="NubeFooterDerecha"
-                width={200}
-                height={152}
-                className="absolute bottom-[-3px] right-0 z-10 mb-32"
-              />
-            </div>
-          </div>
+         
         </div>
       )}
     </main>

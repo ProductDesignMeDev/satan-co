@@ -17,6 +17,10 @@ export { default as CopaHumo } from "./CopaHumo.svg";
 export { default as Flechadere } from "./FlechaDere.png";
 export { default as FlechaIzque } from "./FlechaIzque.png";
 
+//Navbar
+export { default as HumoMenuMobileDerecha } from "./HumoMenuMobileDerecha.svg";
+export { default as HumoMenuMobileIzquierda } from "./HumoMenuMobileIzquierda.svg";
+
 
 //Footer
 export { default as HumoFooterIzquierda } from "./HumoFooterIzquierda.svg";
