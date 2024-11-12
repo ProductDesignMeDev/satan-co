@@ -11,6 +11,13 @@ export { default as HumoEdadDerecha } from "./HumoEdadDerecha.svg";
 export { default as Ellipse } from "./Ellipse.svg";
 export { default as EllipseDerecha } from "./EllipseDerecha.svg";
 
+export { default as Copa } from "./Copa.svg";
+export { default as CopaMar } from "./CopaMar.svg";
+export { default as CopaHumo } from "./CopaHumo.svg";
+export { default as Flechadere } from "./FlechaDere.png";
+export { default as FlechaIzque } from "./FlechaIzque.png";
+
+
 //Footer
 export { default as HumoFooterIzquierda } from "./HumoFooterIzquierda.svg";
 export { default as HumoFooterDerecha } from "./HumoFooterDerecha.svg";

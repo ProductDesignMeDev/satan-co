@@ -1,5 +1,5 @@
 import { Wrapper } from "@/components";
-import { Premio } from "@/public";
+import { Copa } from "@/public";
 import Image from "next/image";
 import { CardPremios } from "@/components/Cards/CardPremios/CardPremios";
 
@@ -26,7 +26,7 @@ export default function Awards() {
         </div>
         <div className="mt-8 sm:mt-12">
           <div className="flex justify-center">
-            <Image src={Premio} alt="Premio" width={40} height={85} className="sm:w-[50px] sm:h-[105.56px]" />
+            <Image src={Copa} alt="Premio" width={40} height={85} className="sm:w-[50px] sm:h-[105.56px]" />
           </div>
           <h2 className="mt-4 text-xl sm:text-2xl font-freckle text-primary4" style={{ width: "100%", maxWidth: "359px", margin: "0 auto" }}>
             Premios por proyecto

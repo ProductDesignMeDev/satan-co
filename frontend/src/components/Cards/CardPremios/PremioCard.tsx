@@ -10,7 +10,7 @@ interface PremioCardProps {
 
 export const PremioCard = ({ title, position, seedName, growerInfo, imageUrl }: PremioCardProps) => {
   return (
-    <div className="w-[275px] h-[380px] bg-[#e05bff]/20 border-2 border-textColor2 rounded-lg p-4 flex flex-col items-center text-white">
+    <div className="w-[275px] h-[380px] bg-[#e05bff]/15 border-2 border-textColor2 rounded-2xl p-4 flex flex-col items-center text-white">
       <Image src={imageUrl} alt={title} width={181} height={77} />
       <h3 className="mt-2 font-poppins text-[19.07px]">{title}</h3>
       <p className="text-[11.74px] font-poppins text-textColor2">{position}</p>

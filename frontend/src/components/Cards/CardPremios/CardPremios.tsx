@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { PremioCard } from "./PremioCard";
-import { CopaMar, CopaPocoHumo, FlechaIzquierd, FlechaDerecha } from "@/public";
+import { CopaMar, CopaHumo, Flechadere, FlechaIzque } from "@/public";
 
 export const CardPremios = () => {
   const premiosData = [
@@ -19,7 +19,7 @@ export const CardPremios = () => {
       position: "3er puesto exterior",
       seedName: "Sunset Fire",
       growerInfo: "Cultivador: Ramiro - Staff Satan&Co",
-      imageUrl: CopaPocoHumo,
+      imageUrl: CopaHumo,
     },
     {
       title: "Copa del Mar 2024",
@@ -43,7 +43,7 @@ export const CardPremios = () => {
   return (
     <div className="w-full max-w-[1194px] h-[458px] sm:w-[1194px] mx-auto flex justify-center items-center rounded-lg relative p-4">
       <Image
-        src={FlechaIzquierd}
+        src={FlechaIzque}
         alt="Flecha izquierda"
         width={36}
         height={36}
@@ -77,7 +77,7 @@ export const CardPremios = () => {
         })}
       </div>
       <Image
-        src={FlechaDerecha}
+        src={Flechadere}
         alt="Flecha derecha"
         width={36}
         height={36}
