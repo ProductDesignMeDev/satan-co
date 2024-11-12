@@ -8,3 +8,7 @@
    body{
     background-color: #2A1540;
 }
+/* Contorno letra */
+.text-outline {
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
