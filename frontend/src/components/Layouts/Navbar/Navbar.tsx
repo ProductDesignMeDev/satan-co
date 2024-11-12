@@ -4,8 +4,6 @@ import Image from "next/image";
 import {
   Logo,
   IconInstagram,
-  HumoFooterDerecha,
-  HumoFooterIzquierda,
   HumoMenuMobileDerecha,
   HumoMenuMobileIzquierda,
 } from "@/public";
