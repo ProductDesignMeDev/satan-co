@@ -21,7 +21,16 @@ export { default as FlechaIzque } from "./FlechaIzque.png";
 //Footer
 export { default as HumoFooterIzquierda } from "./HumoFooterIzquierda.svg";
 export { default as HumoFooterDerecha } from "./HumoFooterDerecha.svg";
+export { default as HumoFooterIzquierdaPNG } from "./HumoFooterIzquierda.png";
+export { default as HumoFooterDerechaPNG } from "./HumoFooterDerecha.png";
 export { default as FuegoFooterSvg } from "./FuegoFooter1.svg";
+export { default as FuegoFooterPNG } from "./FuegoFooter.png";
 
 //Iconos
 export { default as IconInstagram } from "./IconInstagram.svg";
+export { default as FlechaMobile } from "./FlechaMobile.svg";
+
+//Home
+export { default as MoonCake } from "./MoonCake.svg";
+export { default as SpicyBanana } from "./SpicyBanana.png";
+export { default as SunsetFire } from "./SunsetFire.svg";
