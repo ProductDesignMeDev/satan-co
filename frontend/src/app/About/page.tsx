@@ -1,4 +1,5 @@
 import { Wrapper } from "@/components";
+import { AboutSection } from "@/components/Cards/AboutCard/AboutSection"
 
 export default function About() {
   return (
@@ -28,6 +29,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <AboutSection />
     </Wrapper>
   );
 }
