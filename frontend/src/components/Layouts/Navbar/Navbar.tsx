@@ -74,9 +74,9 @@ export default function Navbar() {
         {/* Links de navegación en desktop */}
         <div className="hidden lg:flex flex-row space-x-5">
           <Link
-            href="/"
+            href="/Home"
             className={`hover:text-gray-400 pt-2 pb-2 pl-4 pr-4 ${
-              isActive("/")
+              isActive("/Home")
                 ? " rounded-[28.02px] border-2 border-[#e05bff]"
                 : ""
             } `}
