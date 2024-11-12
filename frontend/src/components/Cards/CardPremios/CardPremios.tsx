@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -41,16 +41,16 @@ export const CardPremios = () => {
   };
 
   return (
-    <div className="w-[1194px] h-[458px] mx-auto flex justify-center items-center rounded-lg relative p-4">
+    <div className="w-full max-w-[1194px] h-[458px] sm:w-[1194px] mx-auto flex justify-center items-center rounded-lg relative p-4">
       <Image
         src={FlechaIzquierd}
         alt="Flecha izquierda"
-        width={48}
-        height={48}
-        className="cursor-pointer absolute left-4 z-10"
+        width={36}
+        height={36}
+        className="cursor-pointer absolute left-4 z-10 hidden sm:block sm:w-[48px] sm:h-[48px]"
         onClick={handleLeftClick}
       />
-      <div className="flex">
+      <div className="flex overflow-x-scroll sm:overflow-visible w-full justify-center items-center">
         {premiosData.map((premio, index) => {
           const isLeftCard = index < selectedIndex;
           const isRightCard = index > selectedIndex;
@@ -60,9 +60,10 @@ export const CardPremios = () => {
               key={index}
               className={`transition-transform duration-300 transform ${
                 index === selectedIndex
-                  ? "scale-125 z-10"
+                  ? "scale-110 sm:scale-125 z-10"
                   : "scale-100"
-              } ${isLeftCard ? "mr-11" : ""} ${isRightCard ? "ml-11" : ""}`}
+              } ${isLeftCard ? "mr-6 sm:mr-11" : ""} ${isRightCard ? "ml-6 sm:ml-11" : ""}`}
+              style={{ width: "275px", height: "335px" }}
             >
               <PremioCard
                 title={premio.title}
@@ -78,9 +79,9 @@ export const CardPremios = () => {
       <Image
         src={FlechaDerecha}
         alt="Flecha derecha"
-        width={48}
-        height={48}
-        className="cursor-pointer absolute right-4 z-10"
+        width={36}
+        height={36}
+        className="cursor-pointer absolute right-4 z-10 hidden sm:block sm:w-[48px] sm:h-[48px]"
         onClick={handleRightClick}
       />
     </div>
