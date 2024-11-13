@@ -7,23 +7,27 @@ import {
   HumoMenuMobileDerecha,
   HumoMenuMobileIzquierda,
 } from "@/public";
-import { HiOutlineMenu, HiOutlineX } from "react-icons/hi"; // Íconos para el menú
-import Link from "next/link"; // Importar Link de Next.js
+import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false); // Estado para saber si la página se ha desplazado
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const pathname = usePathname(); // Usar usePathname() en lugar de useRouter()
-  const isActive = (path: string) => pathname === path; // Verificar el pathname
+  const pathname = usePathname();
+  const isActive = (path: string) => pathname === path;
 
   // Función para cerrar el menú
   const closeMenu = () => setIsOpen(false);
 
+  // Determina si la ruta actual es "/Faq"
+  const isFaqPage = pathname === "/Faq";
+
   // Manejar el evento de scroll
   useEffect(() => {
+    if (isFaqPage) return;
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setIsScrolled(true);
@@ -36,20 +40,22 @@ export default function Navbar() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isFaqPage]);
 
   return (
     <main
-   className={`${
-     isScrolled
-       ? "lg:bg-opacity-60 lg:backdrop-blur-md bg-background"
-       : "bg-background"
-   } text-white lg:h-24 h-16 fixed w-full transition-all duration-300 z-50`} // Añadir z-50 aquí
->
+      className={`${
+        isFaqPage
+          ? " lg:bg-opacity-10 lg:backdrop-blur-md"
+          : isScrolled
+          ? "lg:bg-opacity-60 lg:backdrop-blur-md bg-background"
+          : "bg-background"
+      } text-white lg:h-24 h-16 fixed w-full transition-all duration-300 z-50 bg-background`}
+    >
       <div className="flex items-center justify-between h-full lg:ml-24 lg:mr-24 px-4 lg:px-0">
         {/* Logo */}
         <div className="flex items-center">
-          <Link href="/" className="hover:text-gray-400" onClick={closeMenu}>
+          <Link href="/Home" className="hover:text-gray-400" onClick={closeMenu}>
             <Image
               src={Logo}
               alt="Logo"
@@ -175,30 +181,28 @@ export default function Navbar() {
                 © 2024 Satan&Co X Product Design Me
               </p>
             </div>
-             {/* Imagen fija en el fondo del menú */}
-          <div className="flex flex-row justify-between   ">
-            <div>
-              <Image
-                src={HumoMenuMobileIzquierda}
-                alt="NubeFooterDerecha"
-                width={324}
-                height={138}
-                className="absolute bottom-[-3px] left-[-13px] z-10 mb-28 sm:mb-0"
-              />
-            </div>
-            <div>
-              <Image
-                src={HumoMenuMobileDerecha}
-                alt="NubeFooterDerecha"
-                width={324}
-                height={138}
-                className="absolute bottom-[-3px] right-0 z-10 mb-28 sm:mb-0"
-              />
+            {/* Imagen fija en el fondo del menú */}
+            <div className="flex flex-row justify-between   ">
+              <div>
+                <Image
+                  src={HumoMenuMobileIzquierda}
+                  alt="NubeFooterDerecha"
+                  width={324}
+                  height={138}
+                  className="absolute bottom-[-3px] left-[-13px] z-10 mb-28 sm:mb-0"
+                />
+              </div>
+              <div>
+                <Image
+                  src={HumoMenuMobileDerecha}
+                  alt="NubeFooterDerecha"
+                  width={324}
+                  height={138}
+                  className="absolute bottom-[-3px] right-0 z-10 mb-28 sm:mb-0"
+                />
+              </div>
             </div>
           </div>
-          </div>
-
-         
         </div>
       )}
     </main>

@@ -1,5 +1,7 @@
+"use client"
 import React from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import {
   Logo,
@@ -10,10 +12,17 @@ import {
 } from "@/public";
 
 export default function Footer() {
+
+  const pathname = usePathname(); // Obtiene la ruta actual
+  const isFaqPage = pathname === "/Faq"; // Verifica si estamos en la página de FAQ's
+
+
   return (
     <footer
       role="contentinfo"
-      className="bg-background text-white w-full relative lg:h-[478px] h-[294px] items-center text-center justify-center flex"
+      className={`${
+        isFaqPage ? "bg-marijuana" : "bg-transparent"
+      } text-white w-full relative lg:h-[478px] h-[294px] items-center text-center justify-center flex transition-all duration-300`}
     >
       {/* Humos */}
       <div className="flex flex-row justify-between items-end h-full">

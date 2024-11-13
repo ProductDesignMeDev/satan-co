@@ -75,7 +75,7 @@ export default function Faq() {
             answer="¿Qué miras curioso? Todavía no estan las respuestas. Jaja salu2."
           />
         </div>
-        <div className="lg:mb-24 mb-7">
+        <div className="">
           <h3 className="text-white lg:text-[22px] text-[15px] font-medium leading-[33px] lg:mb-2">
             Cuidados y mantenimiento
           </h3>
