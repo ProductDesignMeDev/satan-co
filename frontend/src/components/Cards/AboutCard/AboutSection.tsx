@@ -3,7 +3,7 @@ import { Fundador, CoFundador, CoFundador2 } from "@/public";
 
 export const AboutSection = () => {
   return (
-    <div className="flex flex-col items-center mt-8 space-y-6">
+    <div className="flex flex-col items-center space-y-6 mt-32">
       <h2 className="text-[40px] font-freckle text-primary4 text-center">
         Conocé nuestro equipo
       </h2>
