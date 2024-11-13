@@ -45,3 +45,7 @@ export { default as MarijuanaFondo } from "./MarijuanaFondo.svg";
 export { default as MoonCake } from "./MoonCake.svg";
 export { default as SpicyBanana } from "./SpicyBanana.png";
 export { default as SunsetFire } from "./SunsetFire.svg";
+export { default as HumoInicioIzquierda } from "./HumoInicioIzquierda.svg";
+export { default as HumoInicioDerecha } from "./HumoInicioDerecha.svg";
+export { default as EllipseInicioIzquierda } from "./EllipseInicioIzquierda.svg";
+export { default as EllipseInicioDerecha } from "./EllipseInicioDerecha.svg";
