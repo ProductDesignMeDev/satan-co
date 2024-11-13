@@ -13,11 +13,11 @@ export default function Footer() {
   return (
     <footer
       role="contentinfo"
-      className="bg-background text-white w-full relative lg:h-[478px] h-[294px]"
+      className="bg-background text-white w-full relative lg:h-[478px] h-[294px] items-center text-center justify-center flex"
     >
       {/* Humos */}
       <div className="flex flex-row justify-between items-end h-full">
-        <div className="flex bottom-0">
+        <div className="flex bottom-0 left-0 absolute">
           <Image
             src={HumoFooterIzquierdaPNG}
             alt="Logo"
@@ -26,7 +26,7 @@ export default function Footer() {
             className="lg:w-[398px] lg:h-[301px]"
           />
         </div>
-        <div>
+        <div className="flex bottom-0 right-0 absolute">
           <Image
             src={HumoFooterDerechaPNG}
             alt="Logo"
@@ -36,7 +36,7 @@ export default function Footer() {
           />
         </div>
       </div>
-      <div className="absolute bottom-0">
+      <div className="absolute bottom-0 items-center text-center justify-center">
         <div className="flex flex-col items-center text-center justify-center space-y-3 mb-[40px] lg:mb-0">
           <div>
             <Image

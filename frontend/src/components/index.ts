@@ -9,4 +9,4 @@ export { default as TestimonyCard } from "./Cards/TestimonyCard/TestimonyCard";
 export { default as TestimonyCardCarousel } from "./Cards/TestimonyCard/TestimonyCardCarousel";
 
 //Exportaciones Accordion
-export { default as Accordeon } from "./Accordeon/Accordeon";
+export { default as Accordion } from "./Accordion/Accordion";

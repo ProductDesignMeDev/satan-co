@@ -33,6 +33,7 @@ export { default as FuegoFooterPNG } from "./FuegoFooter.png";
 //Iconos
 export { default as IconInstagram } from "./IconInstagram.svg";
 export { default as FlechaMobile } from "./FlechaMobile.svg";
+export { default as MarijuanaFondo } from "./MarijuanaFondo.svg";
 
 //Home
 export { default as MoonCake } from "./MoonCake.svg";
