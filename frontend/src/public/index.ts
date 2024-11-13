@@ -18,6 +18,11 @@ export { default as CopaHumo } from "./CopaHumo.svg";
 export { default as Flechadere } from "./FlechaDere.png";
 export { default as FlechaIzque } from "./FlechaIzque.png";
 
+//About
+export { default as Fundador } from "./Fundador.png";
+export { default as CoFundador } from "./CoFundador.png";
+export { default as CoFundador2 } from "./CoFundador2.png";
+
 //Navbar
 export { default as HumoMenuMobileDerecha } from "./HumoMenuMobileDerecha.svg";
 export { default as HumoMenuMobileIzquierda } from "./HumoMenuMobileIzquierda.svg";
