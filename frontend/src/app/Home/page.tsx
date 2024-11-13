@@ -57,18 +57,14 @@ export default function HomePage() {
             <Image
               src={HumoInicioIzquierda}
               alt="HumoInicioIzquierda"
-              width={120}
-              height={330}
-              className="lg:w-[272px] lg:h-[479px] absolute lg:mt-28 mt-0  left-0 -z-50"
+              className="lg:w-[272px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-0  left-0 -z-50"
             />
           </div>
           <div>
             <Image
               src={HumoInicioDerecha}
               alt="HumoInicioDerecha"
-              width={167}
-              height={350}
-              className="lg:w-[257px] lg:h-[540px] absolute lg:mt-28 mt-0  right-0 -z-50"
+              className="lg:w-[257px] lg:h-[540px] w-[167px] h-[350px] absolute lg:mt-28 mt-0  right-0 -z-50"
             />
           </div>
         </div>
@@ -93,8 +89,6 @@ export default function HomePage() {
           <Image
             src={EllipseInicioIzquierda}
             alt="HumoInicioIzquierda"
-            width={120}
-            height={330}
             className=" absolute lg:mt-[-200px]  left-0 -z-50 lg:w-[419px] lg:h-[419px]"
           />
         </div>
@@ -102,8 +96,6 @@ export default function HomePage() {
           <Image
             src={EllipseInicioDerecha}
             alt="HumoInicioDerecha"
-            width={167}
-            height={350}
             className=" absolute lg:mt-28 mt-0  right-0 -z-50 lg:w-[419px] lg:h-[419px]"
           />
         </div>

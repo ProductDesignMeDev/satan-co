@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -8,14 +8,12 @@ import {
   IconInstagram,
   HumoFooterDerechaPNG,
   HumoFooterIzquierdaPNG,
-  FuegoFooterPNG,
+  Fuegofooter300Pgn,
 } from "@/public";
 
 export default function Footer() {
-
   const pathname = usePathname(); // Obtiene la ruta actual
   const isFaqPage = pathname === "/Faq"; // Verifica si estamos en la página de FAQ's
-
 
   return (
     <footer
@@ -30,18 +28,14 @@ export default function Footer() {
           <Image
             src={HumoFooterIzquierdaPNG}
             alt="Logo"
-            width={130}
-            height={93}
-            className="lg:w-[398px] lg:h-[301px]"
+            className="lg:w-[398px] lg:h-[301px] w-[130px] h-[93px]"
           />
         </div>
         <div className="flex bottom-0 right-0 absolute">
           <Image
             src={HumoFooterDerechaPNG}
             alt="Logo"
-            width={130}
-            height={93}
-            className="lg:w-[398px] lg:h-[301px]"
+            className="lg:w-[398px] lg:h-[301px] w-[130px] h-[93px]"
           />
         </div>
       </div>
@@ -51,9 +45,7 @@ export default function Footer() {
             <Image
               src={Logo}
               alt="Logo"
-              width={110}
-              height={98}
-              className="lg:w-[236px] lg:h-[209px]"
+              className="lg:w-[236px] lg:h-[209px] w-[110px] h-[98px]"
             />
           </div>
           <div>
@@ -61,8 +53,12 @@ export default function Footer() {
               Redes Sociales
             </p>
           </div>
-          <div className="flex flex-row lg:space-x-2">
-            <Image src={IconInstagram} alt="Logo" width={20} height={20} />
+          <div className="flex flex-row lg:space-x-1">
+            <Image
+              src={IconInstagram}
+              alt="Logo"
+              className="w-[25px] h-[25px]"
+            />
             <p className="text-white lg:text-[15px] font-normal lg:leading-snug text-xs leading-[18px]">
               satanyco.genetics
             </p>
@@ -74,11 +70,9 @@ export default function Footer() {
           </div>
         </div>
         <Image
-          src={FuegoFooterPNG}
+          src={Fuegofooter300Pgn}
           alt="Logo"
-          width={360}
-          height={41}
-          className="lg:w-full lg:h-[138px]"
+          className="lg:w-[1366px] lg:h-[138px]"
         />
       </div>
     </footer>
