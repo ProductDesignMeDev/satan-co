@@ -55,13 +55,15 @@ export default function Navbar() {
       <div className="flex items-center justify-between h-full lg:ml-24 lg:mr-24 px-4 lg:px-0">
         {/* Logo */}
         <div className="flex items-center">
-          <Link href="/Home" className="hover:text-gray-400" onClick={closeMenu}>
+          <Link
+            href="/Home"
+            className="hover:text-gray-400"
+            onClick={closeMenu}
+          >
             <Image
               src={Logo}
               alt="Logo"
-              width={56}
-              height={40}
-              className="lg:h-[70px] lg:w-[98px]"
+              className="lg:h-[70px] lg:w-24 w-14 h-10"
             />
           </Link>
         </div>
@@ -83,7 +85,7 @@ export default function Navbar() {
             href="/Home"
             className={`hover:text-gray-400 pt-2 pb-2 pl-4 pr-4 ${
               isActive("/Home")
-                ? " rounded-[28.02px] border-2 border-[#e05bff]"
+                ? " rounded-[28.02px] outline outline-2 outline-[#e05bff]"
                 : ""
             } `}
           >
@@ -93,7 +95,7 @@ export default function Navbar() {
             href="/Catalog"
             className={`hover:text-gray-400 pt-2 pb-2 pl-4 pr-4 ${
               isActive("/Catalog")
-                ? " rounded-[28.02px] border-2 border-[#e05bff]"
+                ? " rounded-[28.02px] outline outline-2 outline-[#e05bff]"
                 : ""
             } `}
           >
@@ -103,7 +105,7 @@ export default function Navbar() {
             href="/Awards"
             className={`hover:text-gray-400 pt-2 pb-2 pl-4 pr-4 ${
               isActive("/Awards")
-                ? " rounded-[28.02px] border-2 border-[#e05bff]"
+                ? " rounded-[28.02px] outline outline-2 outline-[#e05bff]"
                 : ""
             } `}
           >
@@ -113,7 +115,7 @@ export default function Navbar() {
             href="/About"
             className={`hover:text-gray-400 pt-2 pb-2 pl-4 pr-4 ${
               isActive("/About")
-                ? " rounded-[28.02px] border-2 border-[#e05bff]"
+                ? " rounded-[28.02px] outline outline-2 outline-[#e05bff]"
                 : ""
             } `}
           >
@@ -123,7 +125,7 @@ export default function Navbar() {
             href="/Faq"
             className={`hover:text-gray-400 pt-2 pb-2 pl-4 pr-4 ${
               isActive("/Faq")
-                ? " rounded-[28px] border-2 border-[#e05bff]"
+                ? " rounded-[28px] outline outline-2 outline-[#e05bff]"
                 : ""
             } `}
           >
@@ -169,9 +171,7 @@ export default function Navbar() {
                 <Image
                   src={IconInstagram}
                   alt="NubeFooterDerecha"
-                  width={0}
-                  height={0}
-                  className="mr-2 mt-1"
+                  className="mr-2 mt-1 w-5 h-5"
                 />
                 <p className="text-sm font-normal leading-snug ">
                   satanyco.genetics

@@ -1,5 +1,7 @@
 "use client";
 import React, { useState, FC } from "react";
+import { LogoCannabis } from "@/public";
+import Image from "next/image";
 
 interface AccordionProps {
   title: string;
@@ -15,9 +17,17 @@ const Accordion: FC<AccordionProps> = ({ title, answer }) => {
         onClick={() => setAccordionOpen(!accordionOpen)}
         className="flex justify-between w-full"
       >
-        <span className="w-[1022px] text-justify text-white lg:text-lg text-xs font-medium leading-[27px]">
-          {title}
-        </span>
+        <div className="flex flex-row items-center space-x-4">
+          <Image
+            src={LogoCannabis}
+            alt="LogoCannabis"
+            className="lg:w-12 lg:h-12 w-6 h-6"
+          />
+          <span className="w-[1022px] text-justify text-white lg:text-lg text-xs font-medium leading-[27px]">
+            {title}
+          </span>
+        </div>
+
         <svg
           className="fill-white shrink-0 ml-8 lg:w-4 lg:h-4"
           width="15"
