@@ -6,8 +6,6 @@ export { default as Error404 } from "./Error404.svg";
 export { default as FlechaIzquierda } from "./FlechaIzquierda.svg";
 export { default as IconCannabis } from "./IconCannabis.svg";
 
-
-
 //Age verification
 export { default as HumoEdadIzquierda } from "./HumoEdadIzquierda.png";
 export { default as HumoEdadDerecha } from "./HumoEdadDerecha.png";
@@ -33,6 +31,8 @@ export { default as HumoMenuMobileIzquierda } from "./HumoMenuMobileIzquierda.sv
 //Faq
 export { default as LogoCannabis } from "./LogoCannabis.png";
 
+//Whatsapp
+export { default as Whatsapp } from "./Whatsapp.svg";
 
 //Footer
 export { default as HumoFooterIzquierda } from "./HumoFooterIzquierda.svg";
