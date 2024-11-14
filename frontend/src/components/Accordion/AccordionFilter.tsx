@@ -18,15 +18,15 @@ export default function AccordionFilter({ title, properties }: AccordionFilterPr
     };
 
     return (
-        <div className="py-1 text-white w-full">
+        <div className="my-4 aling-center justify-center  text-white w-full">
             <button
                 onClick={() => setAccordionOpen(!accordionOpen)}
                 className="flex justify-between items-center w-full"
             >
-                <div className="flex items-center space-x-4">
-                    <span className="text-justify text-white lg:text-lg text-xs font-medium leading-[27px] pl-1">
+                <div className="flex items-center justify-center space-x-4">
+                    <h3 className="font-poppins text-base text-white text-lg font-medium leading-[27px] ml-1">
                         {title}
-                    </span>
+                    </h3>
                 </div>
 
                 <svg
@@ -60,7 +60,7 @@ export default function AccordionFilter({ title, properties }: AccordionFilterPr
                 <ol className="overflow-hidden">
                     {properties &&
                         properties.map((property, index) => (
-                            <li key={index} className="flex justify-between py-2">
+                            <li key={index} className="flex justify-between py-2 ml-1 font-poppins text-sm">
                                 <label htmlFor={property}>{property}</label>
 
                                 <input
@@ -69,7 +69,7 @@ export default function AccordionFilter({ title, properties }: AccordionFilterPr
                                     name={property}
                                     value={property}
                                     onChange={() => { handleFilter(property) }}
-                                    className="appearance-none border-2 border-white bg-transparent w-4 h-4 rounded-sm checked:bg-white checked:border-transparent"
+                                    className="appearance-none border-[2px] border-white bg-transparent w-4 h-4 rounded-sm checked:bg-white checked:border-transparent"
                                 />
                             </li>
                         ))}
@@ -78,7 +78,7 @@ export default function AccordionFilter({ title, properties }: AccordionFilterPr
 
             {/* Línea rosa debajo del título que sube y baja */}
             <div
-                className={`h-[2px] bg-borderpink transition-all duration-300 ease-in-out ${accordionOpen ? "transform translate-y-0" : "transform translate-y-[-100%]"
+                className={`h-[1px] mt-3 bg-borderpink transition-all duration-300 ease-in-out ${accordionOpen ? "transform translate-y-0" : "transform translate-y-[-100%]"
                     }`}
             />
         </div>
