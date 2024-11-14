@@ -27,6 +27,8 @@ export { default as CoFundador2 } from "./CoFundador2.png";
 export { default as HumoMenuMobileDerecha } from "./HumoMenuMobileDerecha.svg";
 export { default as HumoMenuMobileIzquierda } from "./HumoMenuMobileIzquierda.svg";
 
+//Whatsapp
+export { default as Whatsapp } from "./Whatsapp.svg";
 
 //Footer
 export { default as HumoFooterIzquierda } from "./HumoFooterIzquierda.svg";
