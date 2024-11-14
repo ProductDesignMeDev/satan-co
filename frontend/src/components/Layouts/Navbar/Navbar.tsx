@@ -50,7 +50,7 @@ export default function Navbar() {
           : isScrolled
           ? "lg:bg-opacity-60 lg:backdrop-blur-md bg-background"
           : "bg-background"
-      } text-white lg:h-24 h-16 fixed w-full transition-all duration-300 z-50 bg-background`}
+      } text-white lg:h-24 h-16 fixed w-full transition-all duration-300 z-50 bg-background font-poppins`}
     >
       <div className="flex items-center justify-between h-full lg:ml-24 lg:mr-24 px-4 lg:px-0">
         {/* Logo */}

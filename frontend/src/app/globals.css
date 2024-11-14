@@ -26,3 +26,21 @@ body{
 .scrollbar-hide::-webkit-scrollbar {
     display: none; 
   }
+/* Estilos de scroll para la barra */
+
+  /* Estilo de la barra de desplazamiento completa */
+::-webkit-scrollbar {
+  width: 16px; /* Ancho de la barra de desplazamiento */
+  background-color: #3f1f60; /* Fondo de la barra de desplazamiento */
+}
+
+/* Estilo del botón de desplazamiento (thumb) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #e05bff, #863799); /* Gradiente */
+  border-radius: 20px; /* Bordes redondeados */
+}
+
+/* Opcional: ajustar el área de desplazamiento cuando se pulsa */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #d14be8, #74378a); /* Variación en hover */
+}
