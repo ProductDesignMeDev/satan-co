@@ -8,7 +8,7 @@ interface TestimonyCardProps {
 
 export default function TestimonyCard({ image, name, testimonial }: TestimonyCardProps) {
   return (
-    <div className="w-[328px] h-[260px] lg:w-[276px] lg:h-[276px] bg-[#e05bff]/20 rounded-[20px] border-2 border-[#e05bff] text-white">
+    <div className="w-[328px] h-[260px] lg:w-[276px] lg:h-[276px] bg-[#e05bff]/20 rounded-[20px] border-2 border-[#e05bff] text-white font-poppins">
       <div className="flex flex-row justify-between items-center ml-11 mr-11 mt-7 mb-5
       lg:ml-4 lg:mr-4 lg:mt-5 lg:mb-5">
         <div className="w-[76.76px] h-[76.76px] rounded-full border border-[#e05bff] flex justify-center items-center">

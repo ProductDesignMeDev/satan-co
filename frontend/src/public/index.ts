@@ -30,6 +30,8 @@ export { default as HumoMenuMobileIzquierda } from "./HumoMenuMobileIzquierda.sv
 
 //Faq
 export { default as LogoCannabis } from "./LogoCannabis.png";
+export { default as FondoFaqsDerecha } from "./FondoFaqsDerecha.png";
+export { default as FondoFaqsIzquierda } from "./FondoFaqsIzquierda.png";
 
 //Whatsapp
 export { default as Whatsapp } from "./Whatsapp.svg";

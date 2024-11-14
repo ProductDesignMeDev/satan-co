@@ -12,7 +12,7 @@ const Accordion: FC<AccordionProps> = ({ title, answer }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
-    <div className="py-2 text-white border-b border-[#ff31ff]">
+    <div className="py-2 text-white border-b border-[#ff31ff] font-poppins">
       <button
         onClick={() => setAccordionOpen(!accordionOpen)}
         className="flex justify-between w-full"
