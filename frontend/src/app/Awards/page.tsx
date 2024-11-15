@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { Wrapper } from "@/components";
-import { Copa } from "@/public";
+import { HumoInicioIzquierda, HumoInicioDerecha, Copa } from "@/public";
 import Image from "next/image";
 import { CardPremios } from "@/components/Cards/CardPremios/CardPremios";
 
@@ -13,7 +13,21 @@ export const metadata: Metadata = {
 export default function Awards() {
   return (
     <Wrapper>
-      <div className="text-center py-12 px-4 sm:px-0">
+      <div className="relative text-center py-12 px-4 sm:px-0">
+        <Image
+          src={HumoInicioIzquierda}
+          alt="Fondo izquierda"
+          className="lg:w-[272px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-0  left-0"
+          layout="fixed"
+        />
+
+        <Image
+          src={HumoInicioDerecha}
+          alt="Fondo derecha"
+          className="lg:w-[257px] lg:h-[540px] w-[167px] h-[350px] absolute lg:mt-28 mt-0  right-0"
+          layout="fixed"
+        />
+
         <div className="w-full sm:w-[574px] h-auto sm:h-[60px] mx-auto">
           <h2 className="text-[28px] sm:text-[40px] font-poppins text-white">Premios y Reconocimientos</h2>
         </div>
