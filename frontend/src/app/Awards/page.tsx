@@ -1,7 +1,14 @@
+import { Metadata } from "next";
 import { Wrapper } from "@/components";
 import { Copa } from "@/public";
 import Image from "next/image";
 import { CardPremios } from "@/components/Cards/CardPremios/CardPremios";
+
+export const metadata: Metadata = {
+  title: "Premios y Logros | Calidad Certificada en Cannabis",
+  description:
+    "Descubre nuestros premios y logros que certifican la calidad en el mundo del cannabis. Un reconocimiento a nuestro compromiso con la excelencia y la innovación.",
+};
 
 export default function Awards() {
   return (

@@ -1,5 +1,12 @@
+import { Metadata } from "next";
 import { Wrapper } from "@/components";
 import { AboutSection } from "@/components/Cards/AboutCard/AboutSection";
+
+export const metadata: Metadata = {
+  title: "Conoce Nuestro Equipo | Expertos en el Mundo del Cannabis",
+  description:
+    "Conoce a nuestro equipo de expertos en cannabis. Profesionales apasionados y experimentados dedicados a brindar información confiable y de calidad sobre el mundo del cannabis.",
+};
 
 export default function About() {
   return (
