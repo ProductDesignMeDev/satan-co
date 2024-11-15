@@ -19,8 +19,8 @@ export default function Footer() {
     <footer
       role="contentinfo"
       className={`${
-        isFaqPage ? "bg-marijuana" : "bg-transparent"
-      } text-white w-full relative lg:h-[478px] h-[294px] items-center text-center justify-center flex transition-all duration-300`}
+        isFaqPage ? "bg-transparent" : "bg-transparent"
+      } text-white w-full relative lg:h-[478px] h-[294px] items-center text-center justify-center flex transition-all duration-300 font-poppins`}
     >
       {/* Humos */}
       <div className="flex flex-row justify-between items-end h-full">

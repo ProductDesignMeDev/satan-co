@@ -35,6 +35,8 @@ export { default as HumoMenuMobileIzquierda } from "./HumoMenuMobileIzquierda.sv
 
 //Faq
 export { default as LogoCannabis } from "./LogoCannabis.png";
+export { default as FondoFaqsDerecha } from "./FondoFaqsDerecha.png";
+export { default as FondoFaqsIzquierda } from "./FondoFaqsIzquierda.png";
 
 //Whatsapp
 export { default as Whatsapp } from "./Whatsapp.svg";
@@ -54,6 +56,7 @@ export { default as Fuegofooter300Svg } from "./Fuegofooter300.svg";
 export { default as IconInstagram } from "./IconInstagram.svg";
 export { default as FlechaMobile } from "./FlechaMobile.svg";
 export { default as MarijuanaFondo } from "./MarijuanaFondo.svg";
+export { default as CestoBasura } from "./CestoBasura.png";
 
 //Home
 export { default as MoonCake } from "./MoonCake.svg";

@@ -9,7 +9,7 @@ interface HomeCardProps {
 
 export default function HomeCard({ imageSrc, title, isZoomed }: HomeCardProps) {
   return (
-    <main className="flex flex-col items-center lg:w-[375px] lg:h-[370px] lg:mb-28 lg:mt-14">
+    <main className="flex flex-col items-center lg:w-[375px] lg:h-[370px] lg:mb-28 lg:mt-14 font-poppins">
       <div
         className={`flex justify-center lg:w-[375px] ${
           isZoomed ? "lg:h-[390px] lg:mt-[-45px] mt-0" : "lg:h-[310px]"

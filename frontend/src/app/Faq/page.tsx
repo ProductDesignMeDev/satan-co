@@ -1,18 +1,27 @@
 import { Accordion } from "@/components";
 import React from "react";
 
-import { MarijuanaFondo } from "@/public";
+import { FondoFaqsDerecha, FondoFaqsIzquierda } from "@/public";
+import Image from "next/image";
 
 export default function Faq() {
   return (
-    <div
-      style={{
-        backgroundImage: `url(${MarijuanaFondo.src})`,
-        backgroundRepeat: "repeat",
-        backgroundSize: "contain",
-      }}
-    >
-      <div className=" pt-24 ml-4 mr-4 lg:ml-24 lg:mr-24">
+    <div className="relative">
+      {/* Contenedor de fondo para las imágenes */}
+      <div className="absolute top-0 left-0 w-full h-full -z-10">
+        <Image
+          src={FondoFaqsDerecha}
+          alt="Fondo Derecha"
+          className="lg:w-[293px] lg:h-[1372px] w-[130px] h-[93px] absolute top-0 right-0"
+        />
+        <Image
+          src={FondoFaqsIzquierda}
+          alt="Fondo Izquierda"
+          className="lg:w-[293px] lg:h-[1372px] w-[130px] h-[93px] absolute top-0 left-0"
+        />
+      </div>
+
+      <div className=" pt-24 ml-4 mr-4 lg:ml-24 lg:mr-24 font-poppins z-50">
         <h1 className="lg:text-3xl text-xl text-white lg:mt-24 lg:mb-9 mt-5 mb-3">
           FAQ&apos;s
         </h1>
