@@ -37,7 +37,7 @@ export interface ProductProps {
     THC: string;
     image: string;
     description: string;
-    isAvalible: boolean;
+    isAvailable: boolean;
     weeks_of_flowering: string;
     place: string[];
     effect?: string;

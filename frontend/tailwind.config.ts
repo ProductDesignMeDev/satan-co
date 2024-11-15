@@ -32,7 +32,9 @@ const config: Config = {
       },
       backgroundImage: {
         'backgroundgradiant': 'linear-gradient(to bottom, #2A1540 10%, #712789 100%)',
+        'buttongradiant': 'linear-gradient(to bottom, #E05BFF , #863799 )',
       },
+
     },
   },
   plugins: [],
