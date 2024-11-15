@@ -33,21 +33,27 @@ export const CardPremios = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const handleLeftClick = () => {
-    setSelectedIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : premiosData.length - 1));
+    if (selectedIndex > 0) {
+      setSelectedIndex((prevIndex) => prevIndex - 1);
+    }
   };
 
   const handleRightClick = () => {
-    setSelectedIndex((prevIndex) => (prevIndex < premiosData.length - 1 ? prevIndex + 1 : 0));
+    if (selectedIndex < premiosData.length - 1) {
+      setSelectedIndex((prevIndex) => prevIndex + 1);
+    }
   };
 
   return (
-    <div className="w-full max-w-[1194px] h-[458px] sm:w-[1194px] mx-auto flex justify-center items-center rounded-lg relative p-4">
+    <div className="w-full max-w-[1194px] h-auto sm:h-[458px] sm:w-[1194px] mx-auto flex justify-center items-center rounded-lg relative p-4">
       <Image
         src={FlechaIzque}
         alt="Flecha izquierda"
-        width={36}
-        height={36}
-        className="cursor-pointer absolute left-4 z-10 hidden sm:block sm:w-[48px] sm:h-[48px]"
+        width={48}
+        height={48}
+        className={`cursor-pointer absolute left-4 z-10 hidden sm:block sm:w-[48px] sm:h-[48px] ${
+          selectedIndex === 0 ? "opacity-50 cursor-default" : ""
+        }`}
         onClick={handleLeftClick}
       />
       <div className="flex overflow-x-scroll sm:overflow-visible w-full justify-center items-center">
@@ -58,10 +64,8 @@ export const CardPremios = () => {
           return (
             <div
               key={index}
-              className={`transition-transform duration-300 transform ${
-                index === selectedIndex
-                  ? "scale-110 sm:scale-125 z-10"
-                  : "scale-100"
+              className={`transition-transform duration-300 ${
+                index === selectedIndex ? "sm:scale-125 z-10" : ""
               } ${isLeftCard ? "mr-6 sm:mr-11" : ""} ${isRightCard ? "ml-6 sm:ml-11" : ""}`}
               style={{ width: "275px", height: "335px" }}
             >
@@ -79,9 +83,11 @@ export const CardPremios = () => {
       <Image
         src={Flechadere}
         alt="Flecha derecha"
-        width={36}
-        height={36}
-        className="cursor-pointer absolute right-4 z-10 hidden sm:block sm:w-[48px] sm:h-[48px]"
+        width={48}
+        height={48}
+        className={`cursor-pointer absolute right-4 z-10 hidden sm:block sm:w-[48px] sm:h-[48px] ${
+          selectedIndex === premiosData.length - 1 ? "opacity-50 cursor-default" : ""
+        }`}
         onClick={handleRightClick}
       />
     </div>

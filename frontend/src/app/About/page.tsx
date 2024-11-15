@@ -10,8 +10,8 @@ export default function About() {
             ¿Quién es Satan&Co?
           </h2>
         </div>
-        <div className="w-[328px] h-[260px] sm:w-[888px] sm:h-[337px] bg-[#e05bff]/15 rounded-3xl flex items-center justify-center p-4 sm:p-0">
-          <div className="w-[281px] h-[226px] sm:w-[812px] sm:h-[254px] rounded-lg p-4 sm:p-8 flex items-center">
+        <div className="w-full max-w-[328px] sm:max-w-[888px] bg-[#e05bff]/15 rounded-3xl flex items-center justify-center p-4 sm:p-0">
+          <div className="w-full max-w-[281px] sm:max-w-[812px] rounded-lg p-4 sm:p-8 flex items-center">
             <div className="text-white font-poppins text-[14px] sm:text-[20px] leading-relaxed sm:leading-[1.6]">
               <p className="mb-2 sm:mb-4">
                 Somos un equipo de familia y amigos cuya pasión por el Cannabis nos
@@ -28,7 +28,6 @@ export default function About() {
             </div>
           </div>
         </div>
-
       </div>
       <AboutSection />
     </Wrapper>
