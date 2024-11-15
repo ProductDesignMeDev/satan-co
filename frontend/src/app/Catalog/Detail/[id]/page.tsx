@@ -1,7 +1,7 @@
 "use client"
 
 import { DetailProps } from "@/types"
-import searchSeed from "@/utils/productServices"
+import { recommendingProduct, searchSeed } from "@/utils/productServices"
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from "react";
@@ -12,11 +12,22 @@ import ProductCard from "@/components/Cards/ProductCard/ProductCard";
 export default function DetailIdProductSatan(props: DetailProps) {
 
     const [product, setProduct] = useState<ProductProps[] | null>(null);
+    const [relatedProducts, setRelatedProducts] = useState<ProductProps[] | null>(null);
 
     useEffect(() => {
         const data = searchSeed(props.params.id);
         setProduct(data);
     }, [props.params.id]);  // Add `id` as a dependency to re-fetch when it changes
+
+    useEffect(() => {
+        if (product && product.length > 0) {
+            const data1 = recommendingProduct(product[0].seed);
+            const data2 = recommendingProduct(product[0].seed);
+            setRelatedProducts(prevState => prevState ? [...prevState, data1] : [data1]);
+            setRelatedProducts(prevState => prevState ? [...prevState, data2] : [data2])
+        };
+    }, [product]);  // Add `id` as a dependency to re-fetch when it changes
+
 
 
     if (!product) {
@@ -74,11 +85,15 @@ export default function DetailIdProductSatan(props: DetailProps) {
                         </ol>
                     </section>
 
+
+
                     <section className="mt-6">
                         <h2 className="text-2xl text-center font-freckle text-textColor1 ">También te puede interesar</h2>
-                        <ProductCard product={{ id: product[0].id, title: product[0].title, seed: product[0].seed, image: product[0].image }}></ProductCard>
-                        <ProductCard product={{ id: product[0].id, title: product[0].title, seed: product[0].seed, image: product[0].image }}></ProductCard>
-
+                        {relatedProducts && relatedProducts.map((related, index) => (
+                            <div key={index}>
+                                <ProductCard key={index} product={{ id: related.id, title: related.title, seed: related.seed, image: related.image }} />
+                            </div>
+                        ))}
                     </section>
 
                 </main>
