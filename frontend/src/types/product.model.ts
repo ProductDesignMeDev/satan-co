@@ -24,7 +24,7 @@ export enum SCENT {
     KUSH = "Kush"
 }
 
-export enum WEEKS_OF_FLOWERING {
+export enum PLACE {
     EXTERIOR = "Exterior",
     INTERIOR = "Interior"
 }
@@ -40,8 +40,9 @@ export interface ProductProps {
     isAvalible: boolean;
     weeks_of_flowering: string;
     place: string[];
-    effect: string;
-
+    effect?: string;
+    CBD?: string;
+    CBG?: string;
 }
 
 export interface ProductListprops {

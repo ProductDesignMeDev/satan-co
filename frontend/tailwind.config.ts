@@ -23,6 +23,7 @@ const config: Config = {
         textColor1: "#FF31FF",
         textColor2: "#E05BFF",
         textColor3: "#FFFFFF",
+        textColor4: "#8769AE",
         border: {
           'pinck': 'linear-gradient(to right, #E05BFF, #863799)',
         },
