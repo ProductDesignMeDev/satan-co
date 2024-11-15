@@ -9,6 +9,8 @@ export interface AccordionProps {
 export interface AccordionFilterProps {
     title: string;
     properties: string[];
+    state: string[];
+    setState: (state: string[]) => void;
 }
 
 
@@ -25,4 +27,9 @@ export interface DetailProps {
 
 export interface searchParam{
     id: string
+}
+
+export interface catalogState{
+    state:string[];
+    setState:(state:string[])=>void;
 }

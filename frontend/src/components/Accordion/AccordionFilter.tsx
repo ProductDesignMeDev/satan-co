@@ -2,18 +2,18 @@
 import React, { useState } from "react";
 import { AccordionFilterProps } from "@/types/generic";
 
-export default function AccordionFilter({ title, properties }: AccordionFilterProps) {
+export default function AccordionFilter({ title, properties, state, setState }: AccordionFilterProps) {
     const [accordionOpen, setAccordionOpen] = useState(false);
-    const [filter, setFilter] = useState<string[]>([]);
+   
 
 
     const handleFilter = (property: string) => {
-        if (filter.includes(property)) {
-            setFilter(filter.filter((item) => item !== property));
-            console.log(filter)
+        if (state.includes(property)) {
+            setState(state.filter((item:string) => item !== property));
+            console.log(state)
         } else {
-            setFilter([...filter, property]);
-            console.log(filter)
+            setState([...state, property]);
+            console.log(state)
         }
     };
 

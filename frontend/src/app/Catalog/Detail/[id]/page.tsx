@@ -1,7 +1,7 @@
 "use client"
 
 import { DetailProps } from "@/types"
-import { recommendingProduct, searchSeed } from "@/utils/productServices"
+import { recommendingProduct, getSeed } from "@/utils/productServices"
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from "react";
@@ -15,7 +15,7 @@ export default function DetailIdProductSatan(props: DetailProps) {
     const [relatedProducts, setRelatedProducts] = useState<ProductProps[] | null>(null);
 
     useEffect(() => {
-        const data = searchSeed(props.params.id);
+        const data = getSeed(props.params.id);
         setProduct(data);
     }, [props.params.id]);  // Add `id` as a dependency to re-fetch when it changes
 

@@ -1,7 +1,7 @@
 export enum SEED {
     LOW_THC = "Low THC",
     HIGH_THC = "High THC",
-    FOTO_FEM = "Foto Fem",
+    FOTO_FEM = "Foto/FEM",
     DROP_SUNSET_FIRE = "Drop Sunset Fire",
     AUTOFLORECIENTES = "Autoflorecientes",
     MIX_FEM_FOTO = "Mix Fem Foto",
