@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from "next";
 import "./globals.css";
-import { Footer, Navbar } from "@/components";
+import { Footer, Navbar, WhatsAppLink } from "@/components";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,8 +25,12 @@ export default function RootLayout({
       </head>
       <body className="flex flex-col min-h-screen">
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1" >{children}</main>
         <Footer />
+        <WhatsAppLink 
+          phoneNumber="3804249741" 
+          message="¡Hola! Me gustaría obtener más información."
+        />
       </body>
     </html>
   );

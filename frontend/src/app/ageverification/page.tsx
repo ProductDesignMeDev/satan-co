@@ -4,7 +4,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { HiOutlineX } from "react-icons/hi"; // Íconos para el menú
 import {
   Logo,
   HumoEdadIzquierda,
@@ -41,9 +40,7 @@ const AgeVerification = () => {
           <Image
             src={HumoEdadIzquierda}
             alt="HumoEdadIzquierda"
-            width={90}
-            height={160}
-            className="lg:w-[181px] lg:h-[320px]"
+            className="lg:w-[181px] lg:h-[320px] w-[90px] h-[160px]"
           />
         </div>
       </div>
@@ -53,9 +50,7 @@ const AgeVerification = () => {
           <Image
             src={HumoEdadDerecha}
             alt="HumoEdadDerecha"
-            width={90}
-            height={160}
-            className="lg:w-[181px] lg:h-[320px]"
+            className="lg:w-[181px] lg:h-[320px] w-[90px] h-[160px]"
           />
         </div>
       </div>
@@ -65,9 +60,7 @@ const AgeVerification = () => {
           <Image
             src={Ellipse}
             alt="HumoEdadIzquierda"
-            width={205}
-            height={205}
-            className="lg:w-[419px] lg:h-[419px]"
+            className="lg:w-[419px] lg:h-[419px] w-[205px] h-[205px]"
           />
         </div>
       </div>
@@ -77,61 +70,38 @@ const AgeVerification = () => {
           <Image
             src={EllipseDerecha}
             alt="HumoEdadDerecha"
-            width={205}
-            height={205}
-            className="lg:w-[419px] lg:h-[419px]"
+            className="lg:w-[419px] lg:h-[419px] w-[205px] h-[205px]"
           />
         </div>
       </div>
 
-      <div className="lg:w-[400px] lg:h-[190px] w-[310px] h-[230px] px-5 lg:pt-5 lg:pb-[30px] bg-[#e05bff]/20 rounded-[15px] border-2 border-[#e05bff] lg:flex-row lg:justify-start lg:items-start lg:gap-5 lg:inline-flex flex flex-col justify-center items-center relative">
-        <Image src={Logo} alt="Logo" width={49} height={35} />
-        <button onClick={() => handleAgeVerification(false)}>
-          <HiOutlineX
-            size={24}
-            className=" lg:hidden block absolute top-2 right-2"
-          />
-        </button>
-        <div className=" lg:h-[140px] lg:justify-start lg:items-start lg:gap-2.5 lg:flex relative items-center justify-center text-center lg:text-start">
-          <div className=" flex-col lg:justify-start lg:items-start lg:gap-[15px] lg:inline-flex justify-center items-center text-center flex space-y-4 lg:space-y-0">
-            <div className=" h-[85px] flex-col lg:justify-start lg:items-start gap-[5px] flex text-center lg:text-start ">
-              <div className=" text-[#f6f7f8] text-lg font-semibold leading-[30px] flex text-center items-center justify-center lg:text-start ">
-                ¿Eres mayor de 18 años?
-              </div>
-              <div className="text-white text-lg font-normal leading-[25px] flex text-center items-center justify-center lg:text-start ">
-                Debes ser mayor de 18 años para ver este contenido.
-              </div>
+      <div className="w-[310px] lg:w-[400px] h-[230px] lg:h-[258px] px-5 py-5 bg-[#e05bff]/20 rounded-[15px] border-2 border-[#e05bff] flex flex-col items-center justify-center text-center relative space-y-2">
+        <Image src={Logo} alt="Logo" className="w-20 h-16" />
+
+        <div className="flex flex-col items-center space-y-4">
+          <div className="flex flex-col items-center space-y-2">
+            <div className="text-[#f6f7f8] text-lg font-semibold leading-[30px]">
+            ¿Eres mayor de edad?
             </div>
-            <div className="lg:justify-start lg:items-start gap-[5px] lg:inline-flex space-x-4 lg:space-x-0 ">
-              <button
-                onClick={() => handleAgeVerification(false)}
-                className="px-[15px] py-[5px] bg-white rounded-[100px] flex-col justify-start items-center gap-[12.50px] inline-flex"
-              >
-                <div className="lg:justify-start items-center gap-[12.50px] inline-flex">
-                  <div className="text-center text-[#362151] text-[15px] font-medium leading-[30px]">
-                    Salir
-                  </div>
-                </div>
-              </button>
-              <button
-                onClick={() => handleAgeVerification(true)}
-                className="px-[15px] py-[5px] bg-gradient-to-b from-[#e05bff] to-[#863799] rounded-[100px] flex-col justify-start items-center gap-[12.50px] inline-flex"
-              >
-                <div className="lg:justify-start items-center gap-[12.50px] inline-flex">
-                  <div className="text-center text-white text-[15px] font-medium leading-[30px]">
-                    Soy mayor de 18
-                  </div>
-                </div>
-              </button>
+            <div className="text-white text-lg font-normal leading-[25px]">
+              Para acceder, confirma que tienes más de 18 años.
             </div>
           </div>
-          <div className="w-[30px] h-[30px] relative" />
-          <button
-            onClick={() => handleAgeVerification(false)}
-            className="absolute ml-60 lg:block hidden"
-          >
-            <HiOutlineX size={24} />
-          </button>
+
+          <div className="flex space-x-4">
+            <button
+              onClick={() => handleAgeVerification(false)}
+              className="w-24 h-10 px-[15px] py-[5px] border border-white rounded-full text-white text-[15px] font-medium leading-[30px]"
+            >
+              No
+            </button>
+            <button
+              onClick={() => handleAgeVerification(true)}
+              className="w-24 h-10 px-[15px] py-[5px] bg-white rounded-full text-[#362151] text-[15px] font-medium leading-[30px]"
+            >
+              Si
+            </button>
+          </div>
         </div>
       </div>
     </div>

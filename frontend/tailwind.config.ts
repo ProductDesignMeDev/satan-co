@@ -23,6 +23,7 @@ const config: Config = {
         textColor1: "#FF31FF",
         textColor2: "#E05BFF",
         textColor3: "#FFFFFF",
+        textColor4: "#8769AE",
         border: {
           'pinck': 'linear-gradient(to right, #E05BFF, #863799)',
         },
@@ -31,7 +32,9 @@ const config: Config = {
       },
       backgroundImage: {
         'backgroundgradiant': 'linear-gradient(to bottom, #2A1540 10%, #712789 100%)',
+        'buttongradiant': 'linear-gradient(to bottom, #E05BFF , #863799 )',
       },
+
     },
   },
   plugins: [],
