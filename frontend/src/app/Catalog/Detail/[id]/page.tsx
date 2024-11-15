@@ -1,7 +1,5 @@
 import { DetailProps } from "@/types"
 import  searchSeed from "@/utils/productServices"
-import Image from 'next/image';
-import Link from 'next/link';
 
 
 export default function DetailIdProductSatan(props: DetailProps) {
