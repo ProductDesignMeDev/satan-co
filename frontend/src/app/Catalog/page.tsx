@@ -1,3 +1,5 @@
+"use client"
+
 import { Wrapper } from "@/components";
 import ProductCard from "@/components/Cards/ProductCard/ProductCard";
 import FilterBar from "@/components/FilterBar/FilterBar";
