@@ -16,19 +16,19 @@ export default function CatalogCard({ product }: ProductCardProps) {
                     <Image
                         className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-75"
                         src={product.image}
-                        alt={product.title}
+                        alt={product.title?.toString()}
                         width={375}
                         height={320}
                     />
-                    
+
 
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-buttongradiant shadow-lg text-white text-xl py-2 px-4 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         Ver detalle
                     </div>
                 </div>
-                
+
                 <h2 className="text-textColor3 lg:text-base">{product.title}</h2>
-                <h3 className="text-textColor2">{product.seed.toUpperCase()}</h3>
+                <h3 className="text-textColor2">{Array.isArray(product.seed) && product.seed.map((seed: string) => seed.toUpperCase()).join(", ")}</h3>
             </article>
         </GoToDetail>
     );

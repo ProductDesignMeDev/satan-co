@@ -21,12 +21,15 @@ export default function DetailIdProductSatan(props: DetailProps) {
 
     useEffect(() => {
         if (product && product.length > 0) {
-            const data1 = recommendingProduct(product[0].seed);
-            const data2 = recommendingProduct(product[0].seed);
-            setRelatedProducts(prevState => prevState ? [...prevState, data1] : [data1]);
-            setRelatedProducts(prevState => prevState ? [...prevState, data2] : [data2])
-        };
-    }, [product]);  // Add `id` as a dependency to re-fetch when it changes
+            const seedType = product[0].seed; // Consideramos `seed` de `product[0]`
+            if (seedType) {
+                const data1 = recommendingProduct(seedType);
+                const data2 = recommendingProduct(seedType);
+                setRelatedProducts([data1, data2]); // Evita múltiples llamadas redundantes
+
+            }
+        }
+    }, [product]);
 
 
 
@@ -43,7 +46,7 @@ export default function DetailIdProductSatan(props: DetailProps) {
             <div className="grid lg:grid-cols-12 md:grid-cols-12 grid-cols-4  bg-background  text-white font-poppins">
                 <div className="col-span-4">
                     <h1 className="text-3xl font-poppins">{product[0].title}</h1>
-                    <p className="font-poppins text-sm text-textColor3">{product[0].seed.toUpperCase()}</p>
+                    <p className="font-poppins text-sm text-textColor3">{Array.isArray(product[0].seed) && product[0].seed.map((seeds) => seeds.toUpperCase()).join(", ")}</p>
                     <p className="text-sm font-poppins text-textColor2 ">SAT {product[0].THC}% IND {product[0].CBD}% THC {product[0].THC}%</p>
                 </div>
 
@@ -60,7 +63,7 @@ export default function DetailIdProductSatan(props: DetailProps) {
                     <section className="  ">
                         <Image
                             src={product[0].image || "opcion de imagen por defecto"}
-                            alt={product[0].title}
+                            alt={product[0].title.toString()}
                             width={328}
                             height={332}
                             className="w-328 h-332 object-cover object-cover rounded-lg border-4 border-textColor1 overflow-hidden"
@@ -91,7 +94,7 @@ export default function DetailIdProductSatan(props: DetailProps) {
                         <h2 className="text-2xl text-center font-freckle text-textColor1 ">También te puede interesar</h2>
                         {relatedProducts && relatedProducts.map((related, index) => (
                             <div key={index}>
-                                <ProductCard key={index} product={{ id: related.id, title: related.title, seed: related.seed, image: related.image }} />
+                                <ProductCard product={related} />
                             </div>
                         ))}
                     </section>
