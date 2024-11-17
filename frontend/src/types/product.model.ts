@@ -40,7 +40,7 @@ export interface ProductProps {
     isAvailable: boolean;
     weeks_of_flowering: string;
     place: string[];
-    effect: string;
+    effect?: string;
     CBD?: string;
     CBG?: string;
 }

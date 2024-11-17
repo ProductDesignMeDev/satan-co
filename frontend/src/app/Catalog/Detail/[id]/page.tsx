@@ -26,8 +26,7 @@ export default function DetailIdProductSatan(props: DetailProps) {
                 const data1 = recommendingProduct(seedType);
                 const data2 = recommendingProduct(seedType);
                 setRelatedProducts([data1, data2]); // Evita múltiples llamadas redundantes
-                console.log(data1, data2);
-                console.log(relatedProducts);
+
             }
         }
     }, [product]);
@@ -64,7 +63,7 @@ export default function DetailIdProductSatan(props: DetailProps) {
                     <section className="  ">
                         <Image
                             src={product[0].image || "opcion de imagen por defecto"}
-                            alt={product[0].title}
+                            alt={product[0].title.toString()}
                             width={328}
                             height={332}
                             className="w-328 h-332 object-cover object-cover rounded-lg border-4 border-textColor1 overflow-hidden"
@@ -95,7 +94,7 @@ export default function DetailIdProductSatan(props: DetailProps) {
                         <h2 className="text-2xl text-center font-freckle text-textColor1 ">También te puede interesar</h2>
                         {relatedProducts && relatedProducts.map((related, index) => (
                             <div key={index}>
-                                <ProductCard key={index} product={related} />
+                                <ProductCard product={related} />
                             </div>
                         ))}
                     </section>
