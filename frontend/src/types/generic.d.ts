@@ -32,4 +32,7 @@ export interface searchParam{
 export interface catalogState{
     state:string[];
     setState:(state:string[])=>void;
+    filter:(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+    resetFilter:(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+    stateFilter:ProductProps[]
 }
