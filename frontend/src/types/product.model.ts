@@ -1,14 +1,14 @@
 export enum SEED {
     LOW_THC = "Low THC",
     HIGH_THC = "High THC",
-    FOTO_FEM = "Foto Fem",
+    FOTO_FEM = "Foto/FEM",
     DROP_SUNSET_FIRE = "Drop Sunset Fire",
-    AUTOFLORECIENTES = "Autoflorecientes",
-    MIX_FEM_FOTO = "Mix Fem Foto",
+    AUTOFLORECIENTES = "Autofloreciente",
+    MIX_FEM_FOTO = "Mix Fem Fotoperiódico",
 }
 
 export enum SCENT {
-    CITRICO = "Cítrino",
+    CITRICO = "Cítrico",
     BANANA_SPLIT = "Banana Split",
     CREMA = "Crema",
     LIMON = "Limón",
@@ -31,8 +31,8 @@ export enum PLACE {
 
 export interface ProductProps {
     id: string;
-    title: string;
-    seed: string;
+    title: string | string[];
+    seed: string | string[]; 
     scent: string[];
     THC: string;
     image: string;
