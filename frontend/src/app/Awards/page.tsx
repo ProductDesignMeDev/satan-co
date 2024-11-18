@@ -1,12 +1,36 @@
-import { Wrapper } from "@/components";
-import { Copa } from "@/public";
+import { Metadata } from "next";
+import { HumoInicioIzquierda, HumoInicioDerecha, Copa } from "@/public";
 import Image from "next/image";
 import { CardPremios } from "@/components/Cards/CardPremios/CardPremios";
 
+export const metadata: Metadata = {
+  title: "Premios y Logros | Calidad Certificada en Cannabis",
+  description:
+    "Descubre nuestros premios y logros que certifican la calidad en el mundo del cannabis. Un reconocimiento a nuestro compromiso con la excelencia y la innovación.",
+};
+
 export default function Awards() {
   return (
-    <Wrapper>
-      <div className="text-center py-12 px-4 sm:px-0">
+
+    <div className="relative text-center py-12 px-4 sm:px-0 mt-12">
+        <div className="ml-4 mr-4 lg:ml-24 lg:mr-24">
+          <div>
+            <div>
+            <Image
+                src={HumoInicioIzquierda}
+                alt="Fondo izquierda"
+                className="lg:w-[272px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-0  left-0 -z-50"
+              />
+            </div>
+            <div>
+            <Image
+              src={HumoInicioDerecha}
+              alt="Fondo derecha"
+              className="lg:w-[257px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-0  right-0 -z-50"
+            />
+            </div>
+          </div>
+        </div>
         <div className="w-full sm:w-[574px] h-auto sm:h-[60px] mx-auto">
           <h2 className="text-[28px] sm:text-[40px] font-poppins text-white">Premios y Reconocimientos</h2>
         </div>
@@ -35,7 +59,6 @@ export default function Awards() {
             <CardPremios />
           </div>
         </div>
-      </div>
-    </Wrapper>
+    </div>  
   );
 }
