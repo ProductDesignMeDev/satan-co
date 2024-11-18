@@ -23,6 +23,11 @@ export { default as FlechaIzque } from "./FlechaIzque.png";
 export { default as Fundador } from "./Fundador.png";
 export { default as CoFundador } from "./CoFundador.png";
 export { default as CoFundador2 } from "./CoFundador2.png";
+export { default as HumoQuienes1 } from "./HumoQuienes1.png";
+export { default as HumoQuienes2 } from "./HumoQuienes2.png";
+export { default as HumoQuienesMobi1 } from "./HumoQuienesMobi1.png";
+export { default as HumoQuienesMobi2 } from "./HumoQuienesMobi2.png";
+
 
 //Navbar
 export { default as HumoMenuMobileDerecha } from "./HumoMenuMobileDerecha.svg";

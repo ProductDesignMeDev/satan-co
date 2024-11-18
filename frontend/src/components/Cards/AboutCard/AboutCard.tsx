@@ -8,11 +8,11 @@ interface AboutCardProps {
 
 export const AboutCard = ({ imageUrl, title, name }: AboutCardProps) => {
   return (
-    <div className="w-[375px] h-[456px] rounded-2xl flex flex-col items-center p-4 space-y-4">
-      <Image src={imageUrl} alt={name} width={375} height={360} className="rounded-t-2xl object-cover" />
+    <div className="w-[156px] h-[211px] rounded-2xl flex flex-col items-center p-4 space-y-2 md:w-[375px] md:h-[456px]">
+      <Image src={imageUrl} alt={name} width={156} height={160} className="rounded-t-2xl object-cover md:w-full md:h-[360px]" />
       <div className="text-center">
-        <h3 className="text-lg font-poppins text-[20px] text-white">{title}</h3>
-        <p className="text-base font-poppins text-white text-[13px]">{name}</p>
+        <h3 className="text-[13px] font-poppins text-white md:text-lg md:text-[20px]">{title}</h3>
+        <p className="text-[10px] font-poppins text-white md:text-base md:text-[13px]">{name}</p>
       </div>
     </div>
   );
