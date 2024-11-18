@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Awards() {
   return (
 
-    <div className="relative text-center py-12 px-4 sm:px-0">
+    <div className="relative text-center py-12 px-4 sm:px-0 mt-12">
         <div className="ml-4 mr-4 lg:ml-24 lg:mr-24">
           <div>
             <div>

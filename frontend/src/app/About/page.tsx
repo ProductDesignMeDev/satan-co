@@ -12,20 +12,20 @@ export const metadata: Metadata = {
 export default function About() {
   return (
       <div className="relative flex flex-col items-center justify-center space-y-12 mt-12 sm:mt-28 text-center py-12 px-4 sm:px-0">
-        <div className="ml-4 mr-4 lg:ml-24 lg:mr-24 mt-28">
+        <div className="ml-4 mr-4 lg:ml-24 lg:mr-24">
           <div>
             <div>
                 <Image
                   src={HumoQuienes1}
                   alt="Fuego izquierda"
-                  className="lg:w-[272px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-0  left-0 -z-50"
+                  className="lg:w-[272px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-9  left-0 -z-50"
                 />
             </div>
             <div>
                 <Image
                   src={HumoQuienes2}
                   alt="Fuego derecha"
-                  className="lg:w-[257px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-0 right-0 -z-50"
+                  className="lg:w-[257px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-9 right-0 -z-50"
                 />
             </div>
           </div>
