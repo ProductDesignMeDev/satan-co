@@ -1,4 +1,4 @@
-// app/ageverification/page.tsx
+
 "use client";
 
 import { useEffect } from "react";
@@ -33,6 +33,13 @@ const AgeVerification = () => {
   };
 
   return (
+    <>
+    <head>
+        <title>Verificación de Edad | Acceso Restringido para Mayores de Edad</title>
+        <meta name="description" content="Acceso restringido para mayores de edad. Verifica tu edad para ingresar y explorar contenido sobre cannabis de forma segura y responsable." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+    
     <div className="fixed inset-0 bg-background flex justify-center items-center text-white z-50">
       {/* Humos*/}
       <div className="absolute lg:top-14 top-4 left-0 justify-between">
@@ -105,6 +112,7 @@ const AgeVerification = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

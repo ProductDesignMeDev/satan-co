@@ -10,6 +10,13 @@ import {
 } from "@/public";
 import Image from "next/image";
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Explora el Mundo del Cannabis | Inicio",
+  description:
+    "Explora el mundo del cannabis con información confiable sobre variedades, beneficios, cultivo y más. Descubre un espacio educativo y responsable para usuarios interesados en el cannabis",
+};
 
 export default function HomePage() {
   const cardsData = [
