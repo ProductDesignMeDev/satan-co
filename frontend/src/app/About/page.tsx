@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { Wrapper } from "@/components";
 import { HumoQuienes1, HumoQuienes2 } from "@/public";
 import { AboutSection } from "@/components/Cards/AboutCard/AboutSection";
 
@@ -12,21 +11,25 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <Wrapper>
-      <div className="relative flex flex-col items-center justify-center space-y-12 mt-12 sm:mt-28">
-        <Image
-          src={HumoQuienes1}
-          alt="Fuego izquierda"
-          className="absolute top-0 left-0 lg:w-[272px] lg:h-[479px] w-[120px] h-[230px] lg:mt-28 mt-0"
-          layout="fixed"
-        />
-        <Image
-          src={HumoQuienes2}
-          alt="Fuego derecha"
-          className="absolute top-0 right-0 lg:w-[257px] lg:h-[540px] w-[167px] h-[350px] lg:mt-28 mt-0"
-          layout="fixed"
-        />
-
+      <div className="relative flex flex-col items-center justify-center space-y-12 mt-12 sm:mt-28 text-center py-12 px-4 sm:px-0">
+        <div className="ml-4 mr-4 lg:ml-24 lg:mr-24 mt-28">
+          <div>
+            <div>
+                <Image
+                  src={HumoQuienes1}
+                  alt="Fuego izquierda"
+                  className="lg:w-[272px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-0  left-0 -z-50"
+                />
+            </div>
+            <div>
+                <Image
+                  src={HumoQuienes2}
+                  alt="Fuego derecha"
+                  className="lg:w-[257px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-0 right-0 -z-50"
+                />
+            </div>
+          </div>
+        </div>
         <div className="flex items-center justify-center">
           <h2 className="text-[24px] sm:text-[40px] font-freckle text-center text-primary4">
             ¿Quién es Satan&Co?
@@ -52,6 +55,5 @@ export default function About() {
         </div>
         <AboutSection />
       </div>
-    </Wrapper>
   );
 }
