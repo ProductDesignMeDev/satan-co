@@ -60,6 +60,7 @@ export default function AccordionFilter({ title, properties, state, setState, is
                                     id={`checkbox-${index}`}
                                     name={property}
                                     value={property}
+                                    checked={state.includes(property)}
                                     onChange={() => handleFilter(property)}
                                     className="appearance-none border-[2px] border-white bg-transparent w-4 h-4 rounded-sm checked:bg-white checked:border-transparent"
                                 />

@@ -31,6 +31,7 @@ export default function Catalog() {
     const resetFilter = () => {
         setFilteredProducts([]);
         hiddenFilters()
+        setFilter([])
     }
 
     const hiddenFilters = () => {
