@@ -23,41 +23,57 @@ export default function Catalog() {
     console.log(filter, filteredProducts)
 
     const filtrado = () => {
-        const result = filterByParameter(filter); // Filtrar los productos según el estado
-        setFilteredProducts(result); // Actualizar el estado con los productos filtrados
-        hiddenFilters()
+        if (window.innerWidth > 360) {
+            const result = filterByParameter(filter); // Filtrar los productos según el estado
+            setFilteredProducts(result); // Actualizar el estado con los productos filtrados
+
+        } else {
+            const result = filterByParameter(filter); // Filtrar los productos según el estado
+            setFilteredProducts(result); // Actualizar el estado con los productos filtrados
+            hiddenFilters()
+        }
     };
 
     const resetFilter = () => {
-        setFilteredProducts([]);
-        hiddenFilters()
-        setFilter([])
+        if (window.innerWidth > 360) {
+            setFilteredProducts([]);
+            setFilter([])
+        } else {
+            setFilteredProducts([]);
+            setFilter([])
+            hiddenFilters()
+        }
     }
+
+
 
     const hiddenFilters = () => {
         setIsVisible(!isVisible)
     }
     return (
         < Wrapper >
-            <div className="grid lg:grid-cols-12 md:grid-cols-12 sm:grid-cols-4  align-center gap-4 justify-center">
+            <div className="grid md:grid-cols-12 align-center gap-4 justify-center">
 
-                <section className="hidden lg:block md:block grid col-span-3 grid-cols-1 gap-4 justify-right mt-6 ">
+                <section id="filterDesktop" className="hidden lg:block md:block grid col-span-3 grid-cols-1 gap-4 justify-right mt-6 ">
                     <FilterBar state={filter} setState={setFilter} filter={filtrado} resetFilter={resetFilter} stateFilter={filteredProducts} />
                 </section>
-                <section className={`sm:hidden col-span-4 w-[330px] ${isVisible ? "mb-[100%]" : "mb-2"}`}>
-                    <button onClick={hiddenFilters} className=" ">
-                        <div className=" flex items-center gap-2">
 
-                            <p className={`font-poppins text-textColor3 text-2xl ${isVisible ? "absolute right-0 mt-6 mr-6" : ""}`}> {isVisible ? "x" : `Filtrar por`}</p>
+                <section id="filterMobile" className={`sm:hidden col-span-4 w-[330px] ${isVisible ? "mb-[100%]" : "mb-2"}`}>
+
+                    <button onClick={hiddenFilters} className=" ">
+                        <div className=" flex gap-2">
+
+                            <p className={`font-poppins text-textColor3 text-2xl ${isVisible ? "absolute right-0 mt-8 mr-6" : ""}`}> {isVisible ? "x" : `Filtrar por`}</p>
                             {!isVisible && (<Image src={Dropdown} alt="Dropdown" width={20} height={20} className="object-contain" />)}
                         </div>
-
 
                     </button>
                     <div className="grid col-span-4 gap-4 justify-right mt-6 h-[100vh] " style={{ display: isVisible ? "block" : "none" }}>
                         <FilterBar state={filter} setState={setFilter} filter={filtrado} resetFilter={resetFilter} stateFilter={filteredProducts} />
                     </div>
+
                 </section>
+
                 <span className="col-span-1 hidden lg:block md:block "></span>
 
                 <section className="grid lg:col-span-8 md:cols-span-8 md:cols-span-8 col-span-4 justify-right" about="Catalogo de semillas">
