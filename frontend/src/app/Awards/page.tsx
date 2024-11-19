@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { HumoInicioIzquierda, HumoInicioDerecha, Copa } from "@/public";
 import Image from "next/image";
-import { CardPremios } from "@/components/Cards/CardPremios/CardPremios";
+import { AwardsCards } from "@/components";
 
 export const metadata: Metadata = {
   title: "Premios y Logros | Calidad Certificada en Cannabis",
@@ -19,14 +19,14 @@ export default function Awards() {
             <Image
                 src={HumoInicioIzquierda}
                 alt="Fondo izquierda"
-                className="lg:w-[272px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-0  left-0 -z-50"
+                className="lg:w-[272px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-72 sm:mt-12  left-0 -z-50"
               />
             </div>
             <div>
             <Image
               src={HumoInicioDerecha}
               alt="Fondo derecha"
-              className="lg:w-[257px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-0  right-0 -z-50"
+              className="lg:w-[257px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-72 sm:mt-12  right-0 -z-50"
             />
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function Awards() {
             Premios por proyecto
           </h2>
           <div className="mt-8 sm:mt-12 flex justify-center">
-            <CardPremios />
+            <AwardsCards />
           </div>
         </div>
     </div>  

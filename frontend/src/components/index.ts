@@ -8,6 +8,10 @@ export { default as  WhatsAppLink } from "./Layouts/WhatsAppLink/WhatsAppLink";
 export { default as HomeCard } from "./Cards/HomeCard/HomeCard";
 export { default as TestimonyCard } from "./Cards/TestimonyCard/TestimonyCard";
 export { default as TestimonyCardCarousel } from "./Cards/TestimonyCard/TestimonyCardCarousel";
+export { default as PrizeCard } from "./Cards/AwardsCard/PrizeCard";
+export { default as AwardsCards } from "./Cards/AwardsCard/AwardsCards";
+export { default as AboutCard } from "./Cards/AboutCard/AboutCard";
+export { default as AboutSection } from "./Cards/AboutCard/AboutSection";
 
 //Exportaciones Accordion
 export { default as Accordion } from "./Accordion/Accordion";

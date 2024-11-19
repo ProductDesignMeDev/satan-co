@@ -1,7 +1,7 @@
-import { AboutCard } from "./AboutCard";
+import { AboutCard } from "@/components";
 import { Fundador, CoFundador, CoFundador2 } from "@/public";
 
-export const AboutSection = () => {
+export default function AboutSection() {
   return (
     <div className="flex flex-col items-center space-y-4 mt-8 md:space-y-6 md:mt-32">
       <h2 className="text-[20px] font-freckle text-primary4 text-center md:text-[40px]">
@@ -14,4 +14,4 @@ export const AboutSection = () => {
       </div>
     </div>
   );
-};
+}
