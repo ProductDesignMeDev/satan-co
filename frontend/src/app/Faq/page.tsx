@@ -3,6 +3,13 @@ import React from "react";
 
 import { FondoFaqsDerecha, FondoFaqsIzquierda } from "@/public";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "FAQs | Todo lo que Necesitas Saber sobre Cannabis",
+  description:
+    "Encuentra respuestas a las preguntas más frecuentes sobre cannabis. Todo lo que necesitas saber sobre usos, variedades, beneficios y más, explicado de forma clara y sencilla.",
+};
 
 export default function Faq() {
   return (
