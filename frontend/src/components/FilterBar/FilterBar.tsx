@@ -5,16 +5,26 @@ import { SEED, SCENT, PLACE } from "@/types/product.model";
 import { CestoBasura } from "@/public";
 import Image from "next/image";
 import { catalogState } from "@/types";
+import { useState } from "react";
 
 export default function FilterBar({ state, setState, filter, resetFilter, stateFilter }: catalogState) {
+    const [openAccordion, setOpenAccordion] = useState<string | null>(null); // Estado para controlar qué acordeón está abierto
+
+    const toggleAccordion = (title: string) => {
+        // Si el acordeón ya está abierto, ciérralo. Si no, ábrelo.
+        setOpenAccordion(openAccordion === title ? null : title);
+    };
+
+
     return (
         <section>
             <h2 className="font-poppins text-3xl text-textColor3 border-b-[3px] border-borderpink pb-4 pl-1">
                 Filtrar por
             </h2>
-            <AccordionFilter title="Tipo de semilla" properties={Object.values(SEED)} state={state} setState={setState} />
-            <AccordionFilter title="Aromas" properties={Object.values(SCENT)} state={state} setState={setState} />
-            <AccordionFilter title="Lugar de cultivo" properties={Object.values(PLACE)} state={state} setState={setState} />
+            <AccordionFilter title="Tipo de semilla" properties={Object.values(SEED)} state={state} setState={setState} isOpen={openAccordion === "Tipo de semilla"} toggleAccordion={() => toggleAccordion("Tipo de semilla")} />
+            <AccordionFilter title="Aromas" properties={Object.values(SCENT)} state={state} setState={setState} isOpen={openAccordion === "Aromas"} toggleAccordion={() => toggleAccordion("Aromas")} />
+            <AccordionFilter title="Lugar de cultivo" properties={Object.values(PLACE)} state={state} setState={setState} isOpen={openAccordion === "Lugar de cultivo"} toggleAccordion={() => toggleAccordion("Lugar de cultivo")}
+ />
 
             <div className="flex flex-col">
                 <button
