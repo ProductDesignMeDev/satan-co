@@ -57,6 +57,7 @@ export { default as IconInstagram } from "./IconInstagram.svg";
 export { default as FlechaMobile } from "./FlechaMobile.svg";
 export { default as MarijuanaFondo } from "./MarijuanaFondo.svg";
 export { default as CestoBasura } from "./CestoBasura.png";
+export { default as Dropdown } from "./Dropdown.svg";
 
 //Home
 export { default as MoonCake } from "./MoonCake.svg";

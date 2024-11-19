@@ -11,6 +11,8 @@ export interface AccordionFilterProps {
     properties: string[];
     state: string[];
     setState: (state: string[]) => void;
+    toggleAccordion: () => void;
+    isOpen: boolean;
 }
 
 
