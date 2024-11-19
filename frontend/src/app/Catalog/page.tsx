@@ -40,7 +40,7 @@ export default function Catalog() {
                 <section className="hidden lg:block md:block grid col-span-3 grid-cols-1 gap-4 justify-right mt-6">
                     <FilterBar state={filter} setState={setFilter} filter={filtrado} resetFilter={resetFilter} stateFilter={filteredProducts} />
                 </section>
-                <button onClick={hiddenFilters} className="flex justify-between items-center w-full">
+                <button onClick={hiddenFilters} className="flex justify-between items-center w-full sm:hidden">
                     <p className={`font-poppins text-textColor3 text-2xl ${isVisible ? "absolute right-0 mt-6 mr-6" : ""}`}>
                         {isVisible ? "x" : "Filtrar por"}
                     </p>
