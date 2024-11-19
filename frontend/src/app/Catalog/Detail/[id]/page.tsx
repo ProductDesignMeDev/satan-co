@@ -47,7 +47,7 @@ export default function DetailIdProductSatan(props: DetailProps) {
                 <div className="col-span-4">
                     <h1 className="text-3xl font-poppins">{product[0].title}</h1>
                     <p className="font-poppins text-sm text-textColor3">{Array.isArray(product[0].seed) && product[0].seed.map((seeds) => seeds.toUpperCase()).join(", ")}</p>
-                    <p className="text-sm font-poppins text-textColor2 ">SAT {product[0].THC}% IND {product[0].CBD}% THC {product[0].THC}%</p>
+                    <p className="text-sm font-poppins text-textColor2 ">SAT {product[0].THC} IND {product[0].CBD}% THC {product[0].THC}</p>
                 </div>
 
                 {/*Migas de pan */}
@@ -88,7 +88,7 @@ export default function DetailIdProductSatan(props: DetailProps) {
                             </li>
                             <li className="grid grid-cols-[1fr_1fr] border-b-[1px] border-textColor1 py-2 pl-2">
                                 <span >Aroma</span>
-                                <span >{product[0].scent.map(scent => scent).join(", ")}</span>
+                                <span >{product[0].scent.map(scent => scent? scent : "Natural").join(", ")}</span>
                             </li>
                             <li className="grid grid-cols-[1fr_1fr] border-b-[1px] border-textColor1 py-2 pl-2">
                                 <span >Efecto</span>
@@ -106,11 +106,11 @@ export default function DetailIdProductSatan(props: DetailProps) {
                     </section>
 
 
-                    <section className="mt-6">
+                    <section className="mt-6 mb-20 ">
                         <h2 className="text-2xl text-center font-freckle text-textColor1 ">También te puede interesar</h2>
-                        <div className="flex justify-center">
+                        <div className="flex justify-center gap-4 mt-5 h-[164px]">
                             {relatedProducts && relatedProducts.map((related, index) => (
-                                <div key={index}>
+                                <div key={index} >
                                     <ProductCard product={related} />
                                 </div>
                             ))}
