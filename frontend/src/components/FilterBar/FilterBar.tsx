@@ -11,7 +11,6 @@ export default function FilterBar({ state, setState, filter, resetFilter, stateF
     const [openAccordion, setOpenAccordion] = useState<string | null>(null); // Estado para controlar qué acordeón está abierto
 
     const toggleAccordion = (title: string) => {
-        // Si el acordeón ya está abierto, ciérralo. Si no, ábrelo.
         setOpenAccordion(openAccordion === title ? null : title);
     };
 
