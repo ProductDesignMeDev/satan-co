@@ -23,7 +23,7 @@ const Accordion: FC<AccordionProps> = ({ title, answer }) => {
             alt="LogoCannabis"
             className="lg:w-12 lg:h-12 w-6 h-6"
           />
-          <span className="w-[1022px] text-justify text-white lg:text-lg text-xs font-medium leading-[27px]">
+          <span  className="lg:w-[1022px] text-justify text-white lg:text-lg text-xs lg:font-medium lg:leading-[27px] font-normal leading-[18px]">
             {title}
           </span>
         </div>

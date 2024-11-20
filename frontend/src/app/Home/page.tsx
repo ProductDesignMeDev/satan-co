@@ -53,7 +53,7 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col max-w-[1366px] mx-auto">
       <div className="w-full lg:h-[579px] h-[255px] bg-slate-300 pt-24 text-center flex justify-center items-center">
         <p>Banner</p>
       </div>
@@ -112,7 +112,7 @@ export default function HomePage() {
           Testimonios de clientes
         </h1>
         {/* Carrusel para mobile */}
-        <div className="lg:hidden">
+        <div className="lg:hidden flex items-center justify-center">
           <TestimonyCardCarousel testimonies={testimonyData} />
         </div>
 
