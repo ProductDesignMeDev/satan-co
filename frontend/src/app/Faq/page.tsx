@@ -13,18 +13,18 @@ export const metadata: Metadata = {
 
 export default function Faq() {
   return (
-    <div className="relative">
+    <div className="relative mb-9 lg:mb-28">
       {/* Contenedor de fondo para las imágenes */}
       <div className="absolute top-0 left-0 w-full h-full -z-10">
         <Image
           src={FondoFaqsDerecha}
           alt="Fondo Derecha"
-          className="lg:w-[293px] lg:h-[1372px] w-[130px] h-[93px] absolute top-0 right-0"
+          className="lg:w-[293px] lg:h-[1372px] w-[138.13px] h-[648px] mt-20 lg:mt-0 absolute top-0 right-0"
         />
         <Image
           src={FondoFaqsIzquierda}
           alt="Fondo Izquierda"
-          className="lg:w-[293px] lg:h-[1372px] w-[130px] h-[93px] absolute top-0 left-0"
+          className="lg:w-[293px] lg:h-[1372px] w-[138.13px] h-[648px] mt-20 lg:mt-0 absolute top-0 left-0"
         />
       </div>
 

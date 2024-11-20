@@ -60,9 +60,9 @@ export { default as CestoBasura } from "./CestoBasura.png";
 export { default as Dropdown } from "./Dropdown.svg";
 
 //Home
-export { default as MoonCake } from "./MoonCake.svg";
+export { default as MoonCake } from "./SpicyBanana.png";
 export { default as SpicyBanana } from "./SpicyBanana.png";
-export { default as SunsetFire } from "./SunsetFire.svg";
+export { default as SunsetFire } from "./SpicyBanana.png";
 export { default as EllipseInicioIzquierda } from "./EllipseInicioIzquierda.svg";
 export { default as EllipseInicioDerecha } from "./EllipseInicioDerecha.svg";
 export { default as HumoInicioDerecha } from "./HumoInicioDerecha.png";
