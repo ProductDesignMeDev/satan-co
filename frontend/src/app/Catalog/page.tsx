@@ -23,7 +23,7 @@ export default function Catalog() {
     console.log(filter, filteredProducts)
 
     const filtrado = () => {
-        if (window.innerWidth > 360) {
+        if (window.innerWidth > 600) {
             const result = filterByParameter(filter); // Filtrar los productos según el estado
             setFilteredProducts(result); // Actualizar el estado con los productos filtrados
 
@@ -35,7 +35,7 @@ export default function Catalog() {
     };
 
     const resetFilter = () => {
-        if (window.innerWidth > 360) {
+        if (window.innerWidth > 600) {
             setFilteredProducts([]);
             setFilter([])
         } else {
@@ -54,11 +54,11 @@ export default function Catalog() {
         < Wrapper >
             <div className="grid md:grid-cols-12 align-center gap-4 justify-center">
 
-                <section id="filterDesktop" className="hidden lg:block md:block grid col-span-3 grid-cols-1 gap-4 justify-right mt-6 ">
+                <section id="filterDesktop" className="hidden lg:block md:block grid col-span-3 grid-cols-1 gap-4 justify-right lg:mt-36 ">
                     <FilterBar state={filter} setState={setFilter} filter={filtrado} resetFilter={resetFilter} stateFilter={filteredProducts} />
                 </section>
 
-                <section id="filterMobile" className={`sm:hidden col-span-4 w-[330px] ${isVisible ? "mb-[100%]" : "mb-2"}`}>
+                <section id="filterMobile" className={`sm:hidden col-span-4 w-[330px] w-360px h-full ${isVisible ? "mb-[100%]" : "mb-2"}`}>
 
                     <button onClick={hiddenFilters} className=" ">
                         <div className=" flex gap-2">
@@ -76,10 +76,10 @@ export default function Catalog() {
 
                 <span className="col-span-1 hidden lg:block md:block "></span>
 
-                <section className="grid lg:col-span-8 md:cols-span-8 md:cols-span-8 col-span-4 justify-right" about="Catalogo de semillas">
+                <section className="lg:col-span-8 sm:cols-span-8 gap-4 col-span-4 justify-right text-4 lg:mt-24 " about="Catalogo de semillas">
                     <div className={`${isVisible ? "hidden" : ""}`}>
-                        <h3 className="font-poppins text-base text-white text-lg font-medium leading-[27px]">Catalogo de semillas</h3>
-                        <div className="grid grid-cols-2 gap-4 mt-4 h-[]">
+                        <h3 className="font-poppins text-base text-white lg:text-lg font-normal leading-[27px] md:pl-6 lg:pl-0">Catálogo de semillas</h3>
+                        <div className="grid grid-cols-2 gap-4 mt-4 ">
 
 
                             {filteredProducts.length > 0
