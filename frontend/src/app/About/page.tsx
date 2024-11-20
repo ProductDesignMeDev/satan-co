@@ -18,14 +18,14 @@ export default function About() {
                 <Image
                   src={HumoQuienes1}
                   alt="Fuego izquierda"
-                  className="lg:w-[272px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-96 sm:mt-12 left-0 -z-50"
+                  className="lg:w-[272px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-96 sm:mt-48 left-0 -z-50"
                 />
             </div>
             <div>
                 <Image
                   src={HumoQuienes2}
                   alt="Fuego derecha"
-                  className="lg:w-[257px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-96 sm:mt-12 right-0 -z-50"
+                  className="lg:w-[257px] lg:h-[479px] w-[120px] h-[230px] absolute lg:mt-28 mt-96 sm:mt-48 right-0 -z-50"
                 />
             </div>
           </div>
