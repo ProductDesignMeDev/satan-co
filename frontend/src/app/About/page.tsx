@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-      <div className="relative flex flex-col items-center justify-center space-y-12 mt-12 sm:mt-32 text-center py-12 px-4 sm:px-0">
+      <div className="relative flex flex-col items-center justify-center space-y-12 mt-2 sm:mt-36 text-center py-12 px-4 sm:px-0">
         <div className="ml-4 mr-4 lg:ml-24 lg:mr-24">
           <div>
             <div>
