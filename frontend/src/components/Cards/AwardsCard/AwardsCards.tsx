@@ -46,31 +46,34 @@ export default function AwardsCards() {
 
   return (
     <div className="w-full max-w-[1194px] h-[458px] mx-auto flex flex-col sm:flex-row justify-center items-center rounded-lg relative p-4">
+      {/* Flecha izquierda */}
       <Image
         src={FlechaIzque}
         alt="Flecha izquierda"
         width={48}
         height={48}
-        className={`cursor-pointer absolute left-4 z-10 hidden sm:block lg:w-[38px] lg:h-[38px] ${
+        className={`cursor-pointer absolute left-4 z-10 hidden sm:block md:left-6 lg:w-[38px] lg:h-[38px] ${
           selectedIndex === 0 ? "opacity-50 cursor-default" : ""
         }`}
         onClick={handleLeftClick}
       />
 
       {/* Contenedor de las tarjetas (responsive y scrollable en móvil) */}
-      <div
-        className="flex w-full sm:justify-center items-center p-4 gap-4  sm:gap-11 lg:gap-1 overflow-x-auto overflow-y-hidden sm:overflow-hidden snap-x snap-mandatory scroll-smooth scroll-hidden"
-      >
+      <div className="flex w-full sm:justify-center items-center p-4 gap-4 md:gap-6 lg:gap-11 overflow-x-auto overflow-y-hidden sm:overflow-hidden snap-x snap-mandatory scroll-smooth">
         {premiosData.map((premio, index) => {
+          const isSelected = index === selectedIndex;
+
           return (
             <div
               key={index}
-              className={`snap-center shrink-0 transition-transform duration-300 ${
-                index === selectedIndex && "sm:scale-110 sm:z-10"
+              className={`snap-center shrink-0 transition-all duration-300 ${
+                isSelected
+                  ? "sm:scale-110 sm:z-10 md:scale-105" // Tarjeta seleccionada en tablet
+                  : "sm:backdrop-blur-sm sm:opacity-50 sm:scale-90 md:opacity-75" // Blur y opacidad en tablet
               }`}
               style={{
                 width: "100%", // Ajuste para mostrar solo 1 card en móvil
-                maxWidth: "328px", // Asegura el tamaño en móvil
+                maxWidth: "328px", // Asegura el tamaño en móvil y tablet
                 height: "335px",
               }}
             >
@@ -86,12 +89,13 @@ export default function AwardsCards() {
         })}
       </div>
 
+      {/* Flecha derecha */}
       <Image
         src={Flechadere}
         alt="Flecha derecha"
         width={48}
         height={48}
-        className={`cursor-pointer absolute right-16 z-10 hidden sm:block lg:w-[48px] lg:h-[48px] ${
+        className={`cursor-pointer absolute right-16 z-10 hidden sm:block md:right-6 lg:w-[48px] lg:h-[48px] ${
           selectedIndex === premiosData.length - 1
             ? "opacity-50 cursor-default"
             : ""

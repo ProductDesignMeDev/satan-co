@@ -20,9 +20,10 @@ export { default as Flechadere } from "./FlechaDere.png";
 export { default as FlechaIzque } from "./FlechaIzque.png";
 
 //About
-export { default as Fundador } from "./Fundador.png";
-export { default as CoFundador } from "./CoFundador.png";
-export { default as CoFundador2 } from "./CoFundador2.png";
+export { default as Funda } from "./Funda.svg";
+export { default as CoFun } from "./CoFun.svg";
+export { default as CoFun2 } from "./CoFun2.svg";
+export { default as Confunda } from "./Confunda3.svg";
 export { default as HumoQuienes1 } from "./HumoQuienes1.png";
 export { default as HumoQuienes2 } from "./HumoQuienes2.png";
 export { default as HumoQuienesMobi1 } from "./HumoQuienesMobi1.png";

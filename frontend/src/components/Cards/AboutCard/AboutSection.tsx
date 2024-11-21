@@ -1,5 +1,5 @@
 import { AboutCard } from "@/components";
-import { Fundador, CoFundador, CoFundador2 } from "@/public";
+import { Funda, CoFun, CoFun2 } from "@/public"
 
 export default function AboutSection() {
   return (
@@ -8,9 +8,9 @@ export default function AboutSection() {
         Conocé nuestro equipo
       </h2>
       <div className="flex flex-wrap justify-center gap-4 md:flex-nowrap md:space-x-6">
-        <AboutCard imageUrl={Fundador} title="Fundador" name="Matias Arreyes" />
-        <AboutCard imageUrl={CoFundador} title="Co-fundador" name="Ramiro Gopar" />
-        <AboutCard imageUrl={CoFundador2} title="Co-fundador" name="Emiliano Barrientos" />
+        <AboutCard imageUrl={Funda} title="Fundador" name="Matias Arreyes" />
+        <AboutCard imageUrl={CoFun} title="Co-fundador" name="Ramiro Gopar" />
+        <AboutCard imageUrl={CoFun2} title="Co-fundador" name="Emiliano Barrientos" />
       </div>
     </div>
   );
