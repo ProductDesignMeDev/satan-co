@@ -63,7 +63,7 @@ export default function Navbar() {
             <Image
               src={Logo}
               alt="Logo"
-              className="lg:h-[98.09px] lg:w-[70px] h-10 w-[56.05px]"
+              className="lg:h-[70px] lg:w-[98.09px] h-10 w-[56.05px]"
             />
           </Link>
         </div>
