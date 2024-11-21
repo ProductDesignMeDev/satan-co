@@ -52,14 +52,14 @@ export default function AwardsCards() {
         alt="Flecha izquierda"
         width={48}
         height={48}
-        className={`cursor-pointer absolute left-4 z-10 hidden sm:block md:left-6 lg:w-[38px] lg:h-[38px] ${
+        className={`cursor-pointer absolute -ml-9 left-4 z-10 hidden sm:block md:left-6 lg:w-[38px] lg:h-[38px] ${
           selectedIndex === 0 ? "opacity-50 cursor-default" : ""
         }`}
         onClick={handleLeftClick}
       />
 
       {/* Contenedor de las tarjetas (responsive y scrollable en móvil) */}
-      <div className="flex w-full sm:justify-center items-center p-4 gap-4 md:gap-6 lg:gap-11 overflow-x-auto overflow-y-hidden sm:overflow-hidden snap-x snap-mandatory scroll-smooth">
+      <div className="flex w-full sm:justify-center items-center p-4 gap-2 md:gap-4 lg:gap-4 overflow-x-auto overflow-y-hidden sm:overflow-hidden snap-x snap-mandatory scroll-smooth">
         {premiosData.map((premio, index) => {
           const isSelected = index === selectedIndex;
 
@@ -95,7 +95,7 @@ export default function AwardsCards() {
         alt="Flecha derecha"
         width={48}
         height={48}
-        className={`cursor-pointer absolute right-16 z-10 hidden sm:block md:right-6 lg:w-[48px] lg:h-[48px] ${
+        className={`cursor-pointer absolute  right-16 z-10 hidden sm:block md:right-6 lg:w-[48px] lg:h-[48px] ${
           selectedIndex === premiosData.length - 1
             ? "opacity-50 cursor-default"
             : ""
