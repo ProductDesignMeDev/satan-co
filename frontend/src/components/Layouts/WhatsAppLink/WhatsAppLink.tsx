@@ -19,7 +19,7 @@ export default function WhatsAppLink({
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed top-1/2 right-4 transform -translate-y-1/2 z-60 md:right-6 lg:right-8"
+      className="fixed top-[450px] md:top-[552px] right-[14px] transform -translate-y-1/2 z-60 md:right-13 lg:right-8"
     >
       <Image src={Whatsapp} alt={altText} width={60} height={60} />
     </a>
