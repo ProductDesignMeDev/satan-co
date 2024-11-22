@@ -30,13 +30,13 @@ export default function Awards() {
           </div>
         </div>
       </div>
-      <div className="w-full sm:w-[574px] h-auto sm:h-[60px] mx-auto mt-2 sm:mt-[108px]">
-        <h2 className="text-[28px] sm:text-[40px] font-poppins text-white">
+      <div className="w-full sm:w-[574px] h-auto sm:h-[60px] mx-auto mt-1 sm:mt-[108px]">
+        <h2 className="text-[20px] sm:text-[40px] font-poppins text-white sm:text-center sm:ml-0 ml-4 text-left">
           Premios y Reconocimientos
         </h2>
       </div>
-      <div className="w-full sm:w-[768px] h-auto sm:h-[196px] mx-auto mt-[32px] sm:mt-0">
-        <p className="mt-4 text-[14px] sm:text-[16px] font-poppins text-white max-w-full sm:max-w-[680px] mx-auto leading-[1.6]">
+      <div className="w-full sm:w-[768px] h-auto sm:h-[196px] mx-auto mt-[25px] sm:mt-0">
+        <p className="mt-2 text-[12px] sm:text-[18px] font-poppins text-white sm:text-center sm:ml-10 ml-4 text-left max-w-full sm:max-w-[700px] mx-auto leading-[1.5]">
           En Satan&Co, cada semilla que producimos es el resultado de una
           cuidadosa investigación, pasión por la excelencia y compromiso con la
           innovación. Nos enorgullece haber sido reconocidos por diversas
@@ -44,14 +44,14 @@ export default function Awards() {
           calidad, consistencia y diversidad de nuestras semillas.
         </p>
         <div className="my-4 sm:my-8"></div>
-        <p className="mt-4 text-[14px] sm:text-[16px] font-poppins text-white max-w-full sm:max-w-[680px] mx-auto leading-[1.6]">
+        <p className="mt-4 text-[12px] sm:text-[18px] font-poppins text-white sm:text-center sm:ml-10 ml-4 text-left max-w-full sm:max-w-[700px] mx-auto leading-[1.5]">
           Estos premios y condecoraciones reflejan nuestra dedicación a ofrecer
           productos de primera categoría a nuestros clientes y nuestra apuesta
           por la mejora continua en cada etapa del cultivo. ¡Gracias por ser
           parte de nuestro crecimiento y éxito!
         </p>
       </div>
-      <div className="mt-[60px] sm:mt-28">
+      <div className="mt-[250px] sm:mt-40">
         <div className="flex justify-center">
           <Image
             src={Copa}
@@ -80,7 +80,7 @@ export default function Awards() {
             />
           </div>
         </div>
-        <div className="mt-8 sm:mt-12 flex justify-center">
+        <div className="mt-2 sm:mt-12 flex justify-center">
           <AwardsCards />
         </div>
       </div>

@@ -59,7 +59,19 @@ export default function AwardsCards() {
       />
 
       {/* Contenedor de las tarjetas (responsive y scrollable en móvil) */}
-      <div className="flex w-full sm:justify-center items-center p-4 gap-3 md:gap-4 lg:gap-4 overflow-x-auto overflow-y-hidden sm:overflow-hidden snap-x snap-mandatory scroll-smooth">
+      <div
+        className="flex w-full sm:justify-center items-center p-4 gap-3 md:gap-4 lg:gap-4 overflow-x-auto overflow-y-hidden sm:overflow-hidden snap-x snap-mandatory scroll-smooth"
+        style={{
+          scrollbarWidth: "none", // Firefox
+          msOverflowStyle: "none", // IE/Edge
+        }}
+      >
+        <style jsx>{`
+          /* Ocultar scroll para navegadores basados en WebKit */
+          div::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
         {premiosData.map((premio, index) => {
           const isSelected = index === selectedIndex;
 

@@ -14,15 +14,15 @@ export default function AboutCard({ imageUrl, title, name }: AboutCardProps) {
           src={imageUrl}
           alt={name}
           width={156}
-          height={160}
-          className="rounded-2xl object-cover md:w-full md:h-[360px]"
+          height={164}
+          className="rounded-2xl object-cover md:w-full md:h-[360px] w-[156px] h-[164px] sm:w-[156px] sm:h-[164px]"
         />
       </div>
       <div className="text-center">
-        <h3 className="text-[13px] font-poppins text-white md:text-lg md:text-[20px]">
+        <h3 className="text-[15px] sm:text-[24px] font-poppins text-white md:text-lg md:text-[20px]">
           {title}
         </h3>
-        <p className="text-[10px] font-poppins text-white md:text-base md:text-[13px]">
+        <p className="text-[12px] sm:text-[20px] font-poppins text-white md:text-base md:text-[13px]">
           {name}
         </p>
       </div>
