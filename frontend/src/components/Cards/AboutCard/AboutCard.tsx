@@ -9,7 +9,7 @@ interface AboutCardProps {
 export default function AboutCard({ imageUrl, title, name }: AboutCardProps) {
   return (
     <div className="w-[156px] h-[211px] rounded-2xl flex flex-col items-center p-4 space-y-2 md:w-[375px] md:h-[456px]">
-      <div className="rounded-2xl outline outline-3 outline-purple-600 md:w-full md:h-[360px] overflow-hidden">
+      <div className="rounded-2xl border-2 border-borderpink md:w-full md:h-[360px] overflow-hidden">
         <Image
           src={imageUrl}
           alt={name}

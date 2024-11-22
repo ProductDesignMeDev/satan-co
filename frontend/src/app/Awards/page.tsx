@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { HumoInicioIzquierda, HumoInicioDerecha, Copa } from "@/public";
+import { HumoInicioIzquierda, HumoInicioDerecha, Copa, EllipseInicioIzquierda, EllipseInicioDerecha } from "@/public";
 import Image from "next/image";
 import { AwardsCards } from "@/components";
 
@@ -64,6 +64,22 @@ export default function Awards() {
         <h2 className="mt-4 text-xl sm:text-2xl font-freckle text-primary4 w-full max-w-[359px] mx-auto">
           Premios por proyecto
         </h2>
+        <div className="lg:block hidden">
+          <div>
+            <Image
+              src={EllipseInicioIzquierda}
+              alt="HumoInicioIzquierda"
+              className=" absolute lg:mt-[-200px]  left-0 -z-50 lg:w-[419px] lg:h-[419px]"
+            />
+          </div>
+          <div>
+            <Image
+              src={EllipseInicioDerecha}
+              alt="HumoInicioDerecha"
+              className=" absolute lg:mt-28 mt-0  right-0 -z-50 lg:w-[419px] lg:h-[419px]"
+            />
+          </div>
+        </div>
         <div className="mt-8 sm:mt-12 flex justify-center">
           <AwardsCards />
         </div>
