@@ -29,7 +29,7 @@ export default function RootLayout({
         <main className="flex-1" >{children}</main>
         <Footer />
         <WhatsAppLink 
-          phoneNumber="3804249741" 
+          phoneNumber="+5492235837103" 
           message="¡Hola! Me gustaría obtener más información."
         />
       </body>

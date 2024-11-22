@@ -16,7 +16,7 @@ export default function PrizeCard({
   imageUrl,
 }: PremioCardProps) {
   return (
-    <div className="w-full max-w-[275px] h-[335px] bg-[#e05bff]/15 border-2 border-textColor2 rounded-2xl p-4 flex flex-col items-center text-white">
+    <div className="w-full max-w-[275px] h-[335px] bg-[#e05bff]/15 border-2 border-borderpink rounded-2xl p-4 flex flex-col items-center text-white">
       <Image
         src={imageUrl}
         alt={title}
