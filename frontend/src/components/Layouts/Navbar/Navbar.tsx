@@ -63,7 +63,7 @@ export default function Navbar() {
             <Image
               src={Logo}
               alt="Logo"
-              className="lg:h-[78px] lg:w-[89px] h-10 w-[56.05px]"
+              className=" lg:w-[89px] lg:h-[78px] w-[44px] h-[39px]"
             />
           </Link>
         </div>
@@ -138,6 +138,13 @@ export default function Navbar() {
       {isOpen && (
         <div className="lg:hidden absolute lg:top-24 top-[63px] left-0 w-full bg-backgroundgradiant text-white flex flex-col space-y-4 py-6 text-left mt-[-1px]">
           <div className="ml-8 h-screen z-50 text-[32px] font-medium leading-10 flex flex-col space-y-4 pt-16">
+            <Link
+              href="/Home"
+              className="hover:text-gray-400"
+              onClick={closeMenu}
+            >
+              Inicio
+            </Link>
             <Link
               href="/Catalog"
               className="hover:text-gray-400"
