@@ -15,6 +15,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.3.0",
+    "sharp": "^0.33.5",
     "ts-jest": "^29.2.5",
     "tw-elements-react": "^1.0.0-alpha-end"
   },
@@ -26,6 +27,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/sharp": "^0.32.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.13",
     "jest": "^29.7.0",
