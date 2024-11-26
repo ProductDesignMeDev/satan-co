@@ -8,16 +8,17 @@ import { filterByParameter } from "@/utils/productServices";
 import { useState } from "react";
 import { Dropdown } from "@/public";
 import Image from "next/image";
-
+import x from "@/public/x.svg"
+// import {metadata} from "@/utils/metadata/metaCatalog"
 
 
 
 export default function Catalog() {
-
+    
     const [filter, setFilter] = useState<string[]>([]);
     const [filteredProducts, setFilteredProducts] = useState<typeof seeds>([]);
     const [isVisible, setIsVisible] = useState(false)
-
+    
 
 
     console.log(filter, filteredProducts)
@@ -63,7 +64,7 @@ export default function Catalog() {
                     <button onClick={hiddenFilters} className=" ">
                         <div className=" flex gap-2">
 
-                            <p className={`font-poppins text-textColor3 text-2xl ${isVisible ? "absolute right-0 mt-8 mr-6" : ""}`}> {isVisible ? "x" : `Filtrar por`}</p>
+                            <p className={`font-poppins text-textColor3 text-2xl ${isVisible ? "absolute right-4 mt-8 mr-4" : ""}`}> {isVisible ? <Image src={x} alt="Dropdown" width={26} height={26} /> : `Filtrar por`}</p>
                             {!isVisible && (<Image src={Dropdown} alt="Dropdown" width={20} height={20} className="object-contain" />)}
                         </div>
 
@@ -78,8 +79,8 @@ export default function Catalog() {
 
                 <section className="lg:col-span-8 sm:cols-span-8 gap-4 col-span-4 justify-right text-4 lg:mt-24 " about="Catalogo de semillas">
                     <div className={`${isVisible ? "hidden" : ""}`}>
-                        <h3 className="font-poppins text-base text-white lg:text-lg font-normal leading-[27px] md:pl-6 lg:pl-0">Catálogo de semillas</h3>
-                        <div className="grid grid-cols-2 gap-4 mt-4 ">
+                        <h3 className="font-poppins text-base text-white lg:text-xl font-normal leading-[27px] md:pl-6 lg:pl-0">Catálogo de semillas</h3>
+                        <div className="grid grid-cols-2 lg:mb-36 gap-4 mt-4 mb-4 ">
 
 
                             {filteredProducts.length > 0

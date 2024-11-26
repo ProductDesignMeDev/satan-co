@@ -151,7 +151,7 @@ export default function DetailIdProductSatan(props: DetailProps) {
 
 
                     <section className="mt-6 mb-20 col-span-12 order-8 lg:mt-16 lg:pb-24 lg:mb-24 " >
-                        <h2 className="text-2xl text-center font-freckle text-textColor1 ">También te puede interesar</h2>
+                        <h2 className="lg:text-4xl text-2xl text-center font-freckle text-textColor1 ">También te puede interesar</h2>
                         <div className="flex justify-center gap-4 mt-5 h-[164px]">
                             {relatedProducts && relatedProducts.map((related, index) => (
                                 <div key={index} >
