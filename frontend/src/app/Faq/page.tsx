@@ -33,8 +33,10 @@ export default function Faq() {
           FAQ&apos;s
         </h1>
         <div className="lg:mb-8 mb-7">
-          <h3 className="text-white lg:text-[22px] text-[15px] font-medium leading-[33px] lg:mb-2">
-            Generalidades sobre las Semillas de Cannabis
+          <h3 className="text-white lg:text-[22px] text-xs font-normal lg:font-medium leading-[18px] lg:leading-[33px] lg:mb-2">
+            Generalidades sobre las Semillas de{" "}
+            <br className="lg:hidden block" />
+            Cannabis
           </h3>
           <Accordion
             title="¿Cómo debo almacenar las semillas de cannabis?"
@@ -59,8 +61,9 @@ export default function Faq() {
         </div>
 
         <div className="lg:mb-8 mb-7">
-          <h3 className="text-white lg:text-[22px] text-[15px] font-medium leading-[33px] lg:mb-2">
-          Generalidades sobre el cuidado de la planta
+          <h3 className="text-white lg:text-[22px] text-xs font-normal lg:font-medium leading-[18px] lg:leading-[33px] lg:mb-2">
+            Generalidades sobre el cuidado de <br className="lg:hidden block" />
+            la planta
           </h3>
           <Accordion
             title="¿Qué nutrientes necesitan las plantas de cannabis?"
@@ -89,8 +92,10 @@ export default function Faq() {
         </div>
 
         <div className="lg:mb-8 mb-7">
-          <h3 className="text-white lg:text-[22px] text-[15px] font-medium leading-[33px] lg:mb-2">
-          Tips útiles para el cuidado de la planta de Cannabis
+          <h3 className="text-white lg:text-[22px] text-xs font-normal lg:font-medium leading-[18px] lg:leading-[33px] lg:mb-2">
+            Tips útiles para el cuidado de la planta{" "}
+            <br className="lg:hidden block" />
+            de Cannabis
           </h3>
           <Accordion
             title="Controla el pH del agua y del sustrato"
@@ -113,8 +118,6 @@ export default function Faq() {
             answer="La poda y técnicas como el LST (Low-Stress Training) permiten mejorar la distribución de luz y el flujo de aire, aumentando así el rendimiento de la planta."
           />
         </div>
-
-        
       </div>
     </div>
   );
