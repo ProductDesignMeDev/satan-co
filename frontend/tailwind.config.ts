@@ -31,8 +31,10 @@ const config: Config = {
         iconography2: "#FFFFFF",
       },
       backgroundImage: {
-        'backgroundgradiant': 'linear-gradient(to bottom, #2A1540 10%, #712789 100%)',
-        'buttongradiant': 'linear-gradient(to bottom, #E05BFF , #863799 )',
+        backgroundgradiant: 'linear-gradient(to bottom, #2A1540 10%, #712789 100%)',
+        buttongradiant: 'linear-gradient(to bottom, #E05BFF , #863799 )',
+        borderpinkgradient: "linear-gradient(to bottom, #E05BFF, #863799)",
+
       },
 
     },

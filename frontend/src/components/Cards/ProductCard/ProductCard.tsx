@@ -11,7 +11,7 @@ export default function CatalogCard({ product }: ProductCardProps) {
                 id={product.id}
                 className="flex flex-col text-align-left lg:w-[377px] lg:h-[417px] md:w-[275px] md:h-[320px] w-[156px] h-[164px] md:mx-6 lg:mx-0 text-left mb-4 font-poppins mt-4"
             >
-                <div className="relative group  lg:rounded-2xl rounded-xl overflow-hidden border-2 border-borderpink group lg:mb-4 mb-1">
+                <div className="relative group  lg:rounded-2xl rounded-xl overflow-hidden sm:border-3 border-2 bg-borderpinkgradient bg-clip-border border-transparent group lg:mb-4 mb-1">
                     <Image
                         src={product.image}
                         alt={product.title?.toString()}

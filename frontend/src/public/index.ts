@@ -61,6 +61,8 @@ export { default as CestoBasura } from "./CestoBasura.svg";
 export { default as CestoBasura2 } from "./CestoBasura2.svg";
 export { default as Dropdown } from "./Dropdown.svg";
 export { default as x } from "./x.svg";
+export { default as chevron } from "./chevron-right.svg";
+
 
 //Home
 export { default as MoonCake } from "./SpicyBanana.png";
