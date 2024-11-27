@@ -35,33 +35,34 @@ export default function AccordionFilter({
         className="flex justify-between items-center w-full lg:px-2 px-5"
       >
         <div className="flex items-center justify-center space-x-4 ">
-          <h3 className="font-poppins lg:text-2xl text-lg text-white font-medium pt-5 pb-4 ml-1">
+          <h3 className="font-poppins lg:text-2xl text-lg text-white text-left font-medium pt-5 pb-4 ml-1">
             {title}
           </h3>
         </div>
 
         <svg
-          className="fill-white shrink-0 ml-8 lg:w-7 lg:h-7 w-5 h-5 transition-transform duration-300 ease-out"
-          width="24"
-          height="24"
+          className="fill-white shrink-0 ml-8 lg:w-4 lg:h-4"
+          width="15"
+          height="15"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Línea horizontal (siempre visible) */}
           <rect
-            y="10"
-            width="24"
-            height="2"
+            y="7"
+            width="15"
+            height="1"
             rx="1"
-            className="origin-center"
+            className={`transform origin-center transition duration-200 ease-out lg:w-4 lg:h-[2px] ${
+              isOpen ? "!rotate-180" : ""
+            }`}
           />
-          {/* Línea vertical (visible solo cuando está contraído) */}
           <rect
-            x="10"
-            height="24"
-            width="2"
+            y="7"
+            width="15"
+            height="1"
             rx="1"
-            className={`origin-center transition-transform duration-300 ease-out ${isOpen ? "scale-0" : "scale-100"
-              }`}
+            className={`transform origin-center rotate-90 transition duration-200 ease-out lg:w-4 lg:h-[2px] ${
+              isOpen ? "!rotate-180" : ""
+            }`}
           />
         </svg>
       </button>

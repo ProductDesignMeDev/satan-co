@@ -34,17 +34,17 @@ export default function FilterBar({ state, setState, filter, resetFilter, stateF
             <AccordionFilter title="Lugar de cultivo" properties={Object.values(PLACE)} state={state} setState={setState} isOpen={openAccordion === "Lugar de cultivo"} toggleAccordion={() => toggleAccordion("Lugar de cultivo")}
             />
 
-            <div className="flex md:flex-col sm:flex-row items-center justify-center gap-4 mt-5 md:w-[276px]">
+            <div className="flex lg:flex-col flex-row align-center justify-center gap-4 mt-5 lg:w-[100%]">
                 <button
                     onClick={filter}
-                    className="font-poppins md:order-1 order-2 lg:text-prymary1 lg:text-2xl font-normal text-base rounded-full bg-textColor3 lg:mb-5 mb-5 md:w-[276px] md:h-[55px] w-[147px] h-[40px]  "
+                    className="font-poppins md:order-1 order-2 lg:text-prymary1 lg:text-2xl font-normal text-base rounded-full bg-textColor3 lg:mb-5 mb-5 lg:w-full md:h-[55px] w-[147px] h-[40px]  "
                 >
                     Aplicar filtro
                 </button>
 
                 <button
                     onClick={resetFilter}
-                    className={`flex flex-row md:order-2 order-1 justify-center lg:p-2 items-center font-poppins lg:text-2xl font-normal text-base rounded-full border-2 mb-5 lg:w-[276px] lg:h-[55px] w-[147px] h-[40px]
+                    className={`flex flex-row md:order-2 order-1 justify-center lg:p-2 items-center font-poppins lg:text-2xl font-normal text-base rounded-full border-2 mb-5 lg:w-full lg:h-[55px] w-[147px] h-[40px]
                         ${stateFilter.length > 0 || state.length > 0 ? 'text-textColor3  border-textColor3' : 'text-textColor4 border-textColor4'}`}
                 >
                     Borrar filtro
