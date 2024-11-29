@@ -110,7 +110,7 @@ export default function DetailIdProductSatan(props: DetailProps) {
                                     src={product[0].image || "/default-image.jpg"}
                                     alt={product[0].title.toString()}
                                     layout="fill"
-                                    className="object-cover rounded-3xl border-4 border-textColor1 bg-borderpinkgradient bg-clip-border border-transparent"
+                                    className="object-cover sm:rounded-3xl rounded-xl border-4 border-textColor1 bg-borderpinkgradient bg-clip-border border-transparent"
                                 />
                             </div>
                             <article className="mt-4 lg:mt-8">
