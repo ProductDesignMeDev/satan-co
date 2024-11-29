@@ -18,6 +18,8 @@ export interface AccordionFilterProps {
 
 export interface toDetailProps {
     id: string;
+    name: string;
+    detail: string;
     children?: ReactNode;
 }
 
