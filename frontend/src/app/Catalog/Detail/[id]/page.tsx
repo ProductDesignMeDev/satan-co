@@ -105,12 +105,12 @@ export default function DetailIdProductSatan(props: DetailProps) {
                         </div>
                         {/* Product Image */}
                         <section className="w-[328px] flex-shrink lg:w-[474px] lg:h-[725px] lg:flex flex-col lg:order-1 lg:mr-32 mt-4">
-                            <div className="relative w-[328px] h-[332px] lg:w-[474px] lg:h-[480px] overflow-hidden">
+                            <div className="relative w-[328px] h-[332px] lg:w-[474px] lg:h-[480px]  overflow-hidden">
                                 <Image
                                     src={product[0].image || "/default-image.jpg"}
                                     alt={product[0].title.toString()}
                                     layout="fill"
-                                    className="object-cover rounded-lg border-4 border-textColor1"
+                                    className="object-cover sm:rounded-3xl rounded-xl border-4 border-textColor1 bg-borderpinkgradient bg-clip-border border-transparent"
                                 />
                             </div>
                             <article className="mt-4 lg:mt-8">
