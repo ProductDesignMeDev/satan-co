@@ -168,6 +168,10 @@ export default function DetailIdProductSatan(props: DetailProps) {
 
 
             </div>
+
+            <div className="absolute top-0 right-[-200px] lg:w-[415px] lg:h-[415px] w-[205px] h-[205px] -translate-x-2/2 -translate-y-2/6 rounded-[419px] bg-[rgba(118,0,171,0.4)] blur-[125px] sm:hidden "></div>
+            <div className="absolute  right-[-200px] lg:w-[415px] lg:h-[415px] w-[205px] h-[205px] -translate-x-2/2 -translate-y-3/6 rounded-[419px] bg-[rgba(118,0,171,0.4)] blur-[125px] "></div>
+
         </Wrapper>
     );
 }
