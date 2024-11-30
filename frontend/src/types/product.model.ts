@@ -51,7 +51,7 @@ export interface ProductListprops {
 
 
 export interface ProductCardProps {
-    product: Pick<ProductProps, 'id' | 'title' | 'seed' | 'image'>
+    product: Pick<ProductProps, 'id' | 'title' | 'seed' | 'image' > & { description?: string }
 }
 
 

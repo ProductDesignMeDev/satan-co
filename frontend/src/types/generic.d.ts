@@ -18,25 +18,32 @@ export interface AccordionFilterProps {
 
 export interface toDetailProps {
     id: string;
-    name: string;
-    detail: string;
+    title: string;
+    description: string;
+    seed: string[];
     children?: ReactNode;
 }
 
 export interface DetailProps {
     params: {
         id: string
+
+    },
+    searchParams: {
+        title: string;
+        description: string;
+        seed: string[];
     }
 }
 
-export interface searchParam{
+export interface searchParam {
     id: string
 }
 
-export interface catalogState{
-    state:string[];
-    setState:(state:string[])=>void;
-    filter:(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
-    resetFilter:(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
-    stateFilter:ProductProps[]
+export interface catalogState {
+    state: string[];
+    setState: (state: string[]) => void;
+    filter: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+    resetFilter: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+    stateFilter: ProductProps[]
 }

@@ -10,7 +10,6 @@ import { Wrapper } from "@/components";
 import ProductCard from "@/components/Cards/ProductCard/ProductCard";
 import { chevron } from "@/public";
 
-
 export default function DetailComponent(props: DetailProps) {
 
     const [product, setProduct] = useState<ProductProps[] | null>(null);
