@@ -9,7 +9,7 @@ export enum SEED {
 
 export enum SCENT {
     CITRICO = "Cítrico",
-    BANANA_SPLIT = "Banana Split",
+    BANANA_SPLIT = "Banana split",
     CREMA = "Crema",
     LIMON = "Limón",
     FRUTAL = "Frutal",
@@ -21,7 +21,8 @@ export enum SCENT {
     CHOCOLATE = "Chocolate",
     FRAMBUESA = "Frambuesa",
     DULCE = "Dulce",
-    KUSH = "Kush"
+    KUSH = "Kush",
+    NATURAL = "Natural"
 }
 
 export enum PLACE {
