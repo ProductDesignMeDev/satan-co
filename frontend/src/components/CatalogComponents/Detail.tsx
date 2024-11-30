@@ -121,7 +121,7 @@ export default function DetailComponent(props: DetailProps) {
                     </div>
                     {/* Características del producto */}
 
-                    <section className="mt-8 grid col-span-4 lg:col-span-7 lg:order-3 lg:justify-end sm:hidden">
+                    <section className="mt-8 grid col-span-4 lg:col-span-7 lg:order-3 lg:justify-end sm:hidden -z-10">
                         <h2 className="text-lg py-2 border-y-[3px] border-textColor1">Características</h2>
                         <ol className="space-y-1 text-sm">
                             <li className="grid grid-cols-[1fr_1fr] border-b-[1px] border-textColor1 py-2 pl-2 font-400">
@@ -151,6 +151,7 @@ export default function DetailComponent(props: DetailProps) {
                         </ol>
                     </section>
 
+                    <div className="absolute left-[0px] lg:w-[415px] lg:h-[415px] w-[205px] h-[205px] -translate-x-2/2 -translate-y-1/2 rounded-[419px] bg-[rgba(118,0,171,0.4)] blur-[125px] -z-0"></div>
 
                     <section className="col-span-12 order-8 lg:h-[450px] h-[164px] lg:mt-16 lg:mb-24 mt-8 mb-36 " >
                         <h2 className="lg:text-4xl text-2xl text-center font-freckle text-textColor1 ">También te puede interesar</h2>
@@ -169,9 +170,9 @@ export default function DetailComponent(props: DetailProps) {
 
             </div>
 
-            <div className="absolute top-0 right-[-200px] lg:w-[415px] lg:h-[415px] w-[205px] h-[205px] -translate-x-2/2 -translate-y-2/6 rounded-[419px] bg-[rgba(118,0,171,0.4)] blur-[125px] sm:hidden "></div>
-            <div className="absolute  right-[-200px] lg:w-[415px] lg:h-[415px] w-[205px] h-[205px] -translate-x-2/2 -translate-y-3/6 rounded-[419px] bg-[rgba(118,0,171,0.4)] blur-[125px] "></div>
 
+            <div className="absolute top-0 right-[-0px] lg:w-[415px] lg:h-[415px] w-[205px] h-[205px] -translate-x-2/2 -translate-y-2/6 rounded-[419px] bg-[rgba(118,0,171,0.4)] blur-[125px] hidden lg:block md:block "></div>
+            <div className="absolute right-[0px] lg:w-[415px] lg:h-[415px] w-[205px] h-[205px] -translate-x-2/2 -translate-y-3/6 rounded-[419px] bg-[rgba(118,0,171,0.4)] blur-[125px] "></div>
         </Wrapper>
     );
 }
