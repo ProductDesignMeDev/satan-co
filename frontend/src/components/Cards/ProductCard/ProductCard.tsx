@@ -6,7 +6,7 @@ import GoToDetail from "@/components/ui/GoToDetail"
 
 export default function CatalogCard({ product }: ProductCardProps) {
     return (
-        <GoToDetail id={product.id}>
+        <GoToDetail id={product.id} title={product.title.toString()} description={product?.description || ""} seed={product?.seed || []}>
             <article
                 id={product.id}
                 className="flex flex-col text-align-left lg:w-[377px] lg:h-[417px] md:w-[275px] md:h-[320px] w-[156px] h-[164px] md:mx-6 lg:mx-0 text-left mb-4 font-poppins mt-4"

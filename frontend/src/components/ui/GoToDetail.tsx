@@ -2,13 +2,14 @@
 import { toDetailProps } from "@/types";
 // import {useRouter} from "next/router";
 
-export default function GoToDetail({ id, children }: toDetailProps) {
+export default function GoToDetail({ id, title, description, children, seed }: toDetailProps) {
 
     // const router = useRouter() 
 
     const goDetail = () => {
         const currentPath = window.location.pathname;
-        const targetPath = `/Catalog/Detail/${id}`;
+        
+        const targetPath = `/Catalog/Detail/${id}?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&seed=${encodeURIComponent(seed.map((s) => encodeURIComponent(s)).join(", "))}`;
 
         // Verificar si la ruta actual ya contiene "Detail" y si el id es diferente
         if (currentPath.includes("Detail")) {

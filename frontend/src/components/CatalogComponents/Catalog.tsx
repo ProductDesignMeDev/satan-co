@@ -22,8 +22,6 @@ export default function CatalogComponent() {
 
 
 
-    console.log(filter, filteredProducts)
-
     const filtrado = () => {
         if (window.innerWidth > 600) {
             const result = filterByParameter(filter); // Filtrar los productos según el estado
@@ -88,13 +86,13 @@ export default function CatalogComponent() {
                             {filteredProducts.length > 0
                                 ? filteredProducts.map((product) => (
                                     <div key={product.id}  >
-                                        <ProductCard product={{ id: product.id, title: product.title, seed: product.seed, image: product.image }} />
+                                        <ProductCard product={{ id: product.id, title: product.title, seed: product.seed, image: product.image, description: product.description}} />
                                     </div>
                                 )
                                 )
                                 : seeds.map((product) => (
                                     <div key={product.id}  >
-                                        <ProductCard product={{ id: product.id, title: product.title, seed: product.seed, image: product.image }} />
+                                        <ProductCard product={{ id: product.id, title: product.title, seed: product.seed, image: product.image, description: product.description }} />
                                     </div>
                                 ))}
                         </div>
