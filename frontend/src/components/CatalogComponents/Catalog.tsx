@@ -97,8 +97,8 @@ export default function CatalogComponent() {
                                 ))}
                         </div>
                     </div>
-                    <div className="relative left-1/2 w-[415px] h-[415px] -translate-x-2/2 -translate-y-4/6 rounded-[419px] bg-[rgba(118,0,171,0.4)] blur-[125px] -z-0 "></div>
-                </section>
+                    <div className="absolute right-[0px] lg:w-[415px] lg:h-[415px] w-[205px] h-[205px] -translate-x-2/2 -translate-y-3/6 rounded-[419px] bg-[rgba(118,0,171,0.4)] blur-[125px] -z-0"></div>
+                    </section>
 
             </div>
         </Wrapper >
