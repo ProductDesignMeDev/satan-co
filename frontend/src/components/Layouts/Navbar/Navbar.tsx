@@ -174,16 +174,22 @@ export default function Navbar() {
               FAQ&apos;S {/* Comillas escapadas */}
             </Link>
             <div className="">
-              <div className="flex flex-row items-center mt-9 mb-5">
-                <Image
-                  src={IconInstagram}
-                  alt="NubeFooterDerecha"
-                  className="mr-2 mt-1 w-5 h-5"
-                />
-                <p className="text-sm font-normal leading-snug ">
-                  satanyco.genetics
-                </p>
-              </div>
+              <Link
+                href="https://www.instagram.com/satanyco.genetics/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="flex flex-row items-center mt-9 mb-5">
+                  <Image
+                    src={IconInstagram}
+                    alt="NubeFooterDerecha"
+                    className="mr-2 w-5 h-5"
+                  />
+                  <p className="text-sm font-normal leading-snug ">
+                    satanyco.genetics
+                  </p>
+                </div>
+              </Link>
               <p className="text-[10.67px] font-normal leading-none">
                 © 2024 Satan&Co X Product Design Me
               </p>

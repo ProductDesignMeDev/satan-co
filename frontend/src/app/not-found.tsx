@@ -5,7 +5,7 @@ import { Error404, FlechaIzquierda } from "@/public";
 
 export default function NotFound() {
   return (
-    <main className="flex lg:flex-row lg:justify-between lg:items-start lg:text-start flex-col items-center text-center lg:h-screen h-full lg:ml-24 lg:mr-24 lg:mt-1 mt-24 ml-10 mr-10 mb-[-100px] lg:mb-0">
+    <main className="flex lg:flex-row lg:justify-between lg:items-start lg:text-start flex-col items-center text-center lg:h-screen h-full lg:ml-24 lg:mr-24 lg:mt-1 mt-24 ml-10 mr-10 mb-[-100px] lg:mb-0 font-poppins">
       <div className="flex flex-col text-white lg:mt-[190px]">
         <div className="lg:hidden flex justify-center">
           <Image src={Error404} alt="404" width={263} height={109} />
@@ -15,8 +15,8 @@ export default function NotFound() {
           Página no encontrada
         </div>
         <div className="lg:text-xl text-xs font-normal lg:mb-11 mt-5 lg:mt-0">
-          <span>Esta página no existe o fue eliminada. Te</span> <br />
-          <span>sugerimos que vuelvas al inicio.</span>
+          <span>Esta página no existe o fue eliminada.</span> <br />
+          <span>Te sugerimos que vuelvas al inicio.</span>
         </div>
         <Link href="/Home" className="flex items-center justify-center lg:items-start lg:justify-start mt-12 lg:mt-0 mb-28 lg:mb-0">
           <div className="w-[180px] h-12 bg-white rounded-[20px] flex items-center justify-center text-center">
