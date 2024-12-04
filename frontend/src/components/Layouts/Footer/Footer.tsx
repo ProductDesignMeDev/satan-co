@@ -34,7 +34,7 @@ export default function Footer() {
           />
         </div>
       </div>
-      <div className="absolute bottom-0 items-center text-center justify-center">
+      <div className="absolute bottom-0 items-center text-center justify-center ">
         <div className="flex flex-col items-center text-center justify-center mb-[40px] lg:mb-0">
           <div>
             <Image
