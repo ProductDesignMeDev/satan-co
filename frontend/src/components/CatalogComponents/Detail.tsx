@@ -1,7 +1,7 @@
 "use client"
 
 import { DetailProps } from "@/types"
-import { recommendingProduct, getSeed } from "@/utils/productServices"
+import { recommendingProductBySeed, recommendingProductByScent, getSeed } from "@/utils/productServices"
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from "react";
@@ -9,6 +9,7 @@ import { ProductProps } from "@/types";
 import { Wrapper } from "@/components";
 import ProductCard from "@/components/Cards/ProductCard/ProductCard";
 import { chevron } from "@/public";
+import  seeds  from "@/utils/seeds.json";
 
 export default function DetailComponent(props: DetailProps) {
 
@@ -22,13 +23,27 @@ export default function DetailComponent(props: DetailProps) {
 
     useEffect(() => {
         if (product && product.length > 0) {
-            const seedType = product[0].seed; // Consideramos `seed` de `product[0]`
+            const seedType = product[0].seed; 
+            const scentType = product[0].scent;
             if (seedType) {
-                const data1 = recommendingProduct(seedType);
-                const data2 = recommendingProduct(seedType);
+                let data1 = recommendingProductBySeed(seedType);
+                let data2 = recommendingProductBySeed(seedType);
+                if ( data1.title === product[0].title){
+                    data1 = recommendingProductByScent(scentType)
+                }
+                while(data1.title === product[0].title){
+                    data1 = seeds[Math.floor(Math.random() * seeds.length)];
+                }
+                while(data1 === data2 || data2.title === product[0].title){
+                    data2 = seeds[Math.floor(Math.random() * seeds.length)]
+                }
                 let data3 = null;
                 if (window.innerWidth > 600) {
-                    data3 = recommendingProduct(seedType);
+                    data3 = seeds[Math.floor(Math.random() * seeds.length)];
+                    while(data3 === data1 || data3 === data2){
+                        data3 = seeds[Math.floor(Math.random() * seeds.length)];
+
+                    }
                 }
 
                 setRelatedProducts([data1, data2, ...data3 ? [data3] : []]);
