@@ -5,7 +5,7 @@ import { Error404, FlechaIzquierda } from "@/public";
 
 export default function NotFound() {
   return (
-    <main className="flex lg:flex-row lg:justify-between lg:items-start lg:text-start flex-col items-center text-center lg:h-screen h-full lg:ml-24 lg:mr-24 lg:mt-1 mt-24 ml-10 mr-10 mb-[-100px] lg:mb-0 font-poppins">
+    <main className="flex lg:flex-row lg:justify-between lg:items-start lg:text-start flex-col items-center text-center lg:h-screen h-full lg:ml-24 lg:mr-24 lg:mt-5 mt-24 ml-10 mr-10 mb-[-100px] lg:mb-0 font-poppins">
       <div className="flex flex-col text-white lg:mt-[190px]">
         <div className="lg:hidden flex justify-center">
           <Image src={Error404} alt="404" width={263} height={109} />
