@@ -26,7 +26,7 @@ const AgeVerification = () => {
   const handleAgeVerification = (isAdult: boolean) => {
     localStorage.setItem("ageVerified", JSON.stringify(isAdult));
     if (isAdult) {
-      router.push("/Catalog");
+      router.push("/Home");
     } else {
       window.location.href = "https://www.google.com"; // Si no es mayor de 18, redirige a Google
     }
