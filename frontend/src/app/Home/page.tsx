@@ -59,14 +59,12 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col max-w-[1366px] mx-auto">
-      <div className="w-full lg:h-[579px] h-[255px] bg-slate-300 pt-24 text-center flex justify-center items-center">
-        <div className="relative w-full h-full">
+      <div className="w-full lg:h-[579px] h-[255px] pt-24 text-center flex justify-center items-center">
           <Image
             src={BannerCopaDelMar}
             alt="BannerCopaDelMar"
             layout="responsive"
           />
-        </div>
       </div>
 
       <div className=" ml-4 mr-4 lg:ml-24 lg:mr-24">
