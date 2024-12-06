@@ -5,6 +5,12 @@ export { default as Plantita } from "./Plantita.jpg";
 export { default as Error404 } from "./Error404.svg";
 export { default as FlechaIzquierda } from "./FlechaIzquierda.svg";
 export { default as IconCannabis } from "./IconCannabis.svg";
+export { default as BannerCopaDelMar } from "./BannerCopaDelMar.png";
+export { default as Testimonio1 } from "./Testimonio1.svg";
+export { default as Testimonio2 } from "./Testimonio2.svg";
+export { default as Testimonio3 } from "./Testimonio3.svg";
+export { default as Testimonio4 } from "./Testimonio4.svg";
+
 
 //Age verification
 export { default as HumoEdadIzquierda } from "./HumoEdadIzquierda.png";
