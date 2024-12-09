@@ -54,7 +54,7 @@ export default function CatalogComponent() {
         < Wrapper >
             <div className="grid md:grid-cols-12 align-center gap-4 justify-center">
 
-                <section id="filterDesktop" className="hidden lg:block md:block grid col-span-3 grid-cols-1 gap-4 justify-right lg:mt-36 z-10">
+                <section id="filterDesktop" className="hidden lg:block md:block grid col-span-3 grid-cols-1 gap-4 justify-right lg:mt-36 z-10 sticky top-32 max-h-[80vh] overflow-y-auto">
                     <FilterBar state={filter} setState={setFilter} filter={filtrado} resetFilter={resetFilter} stateFilter={filteredProducts} />
                 </section>
 

@@ -26,8 +26,6 @@ export async function generateMetadata(props : DetailProps): Promise<Metadata> {
 }
 
 export default function DetailProduct(props: DetailProps) {
-
-    console.log(props)
     
     return (
         
