@@ -9,7 +9,7 @@ export enum SEED {
 
 export enum SCENT {
     CITRICO = "Cítrico",
-    BANANA_SPLIT = "Banana Split",
+    BANANA_SPLIT = "Banana split",
     CREMA = "Crema",
     LIMON = "Limón",
     FRUTAL = "Frutal",
@@ -21,7 +21,8 @@ export enum SCENT {
     CHOCOLATE = "Chocolate",
     FRAMBUESA = "Frambuesa",
     DULCE = "Dulce",
-    KUSH = "Kush"
+    KUSH = "Kush",
+    NATURAL = "Natural"
 }
 
 export enum PLACE {
@@ -32,7 +33,7 @@ export enum PLACE {
 export interface ProductProps {
     id: string;
     title: string | string[];
-    seed: string | string[]; 
+    seed: string[]; 
     scent: string[];
     THC: string;
     image: string;
@@ -51,7 +52,7 @@ export interface ProductListprops {
 
 
 export interface ProductCardProps {
-    product: Pick<ProductProps, 'id' | 'title' | 'seed' | 'image'>
+    product: Pick<ProductProps, 'id' | 'title' | 'seed' | 'image' > & { description?: string }
 }
 
 

@@ -1,4 +1,7 @@
+"use client";
+import React, { useState } from 'react';
 import Image from 'next/image';
+import WhatsAppPopup from './WhatsAppPopup';
 import { Whatsapp } from '@/public';
 
 interface WhatsAppLinkProps {
@@ -12,16 +15,22 @@ export default function WhatsAppLink({
   message = '',
   altText = 'WhatsApp Logo',
 }: WhatsAppLinkProps) {
+  const [isPopupOpen, setPopupOpen] = useState(false);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
-    <a
-      href={whatsappUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="fixed top-1/2 right-4 transform -translate-y-1/2 z-60 md:right-6 lg:right-8"
-    >
-      <Image src={Whatsapp} alt={altText} width={60} height={60} />
-    </a>
+    <>
+      <a
+        onClick={() => setPopupOpen(true)}
+        className="fixed top-[450px] md:top-[552px] right-[14px] transform -translate-y-1/2 z-60 md:right-13 lg:right-8 cursor-pointer"
+      >
+        <Image src={Whatsapp} alt={altText} width={60} height={60} />
+      </a>
+      <WhatsAppPopup
+        isOpen={isPopupOpen}
+        onClose={() => setPopupOpen(false)}
+        whatsappUrl={whatsappUrl}
+      />
+    </>
   );
 }

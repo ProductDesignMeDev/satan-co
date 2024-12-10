@@ -8,7 +8,7 @@ export function getSeed(id: string) {
 
 //Esta funcionalidad lo que hace tomar el tipo de semilla que se esta renderizando en la vista
 //y hacer un match por el tipo de sewmillas y traer una semilla random de la lista
-export function recommendingProduct(typeSeed: string | string[]) {
+export function recommendingProductBySeed(typeSeed: string | string[]) {
     const data = seeds.filter((seed) => {
         // Asegúrate de que `seed.seed` sea un array antes de compararlo
         if (Array.isArray(seed.seed) && Array.isArray(typeSeed)) {
@@ -16,6 +16,22 @@ export function recommendingProduct(typeSeed: string | string[]) {
         }
         if (typeof seed.seed === "string" && typeof typeSeed === "string") {
             return seed.seed === typeSeed; // Comparación directa para strings
+        }
+        return false;
+    });
+
+    const randomIndex = Math.floor(Math.random() * data.length);
+    return data[randomIndex];
+}
+
+export function recommendingProductByScent(typeScent: string | string[]) {
+    const data = seeds.filter((scent) => {
+        // Asegúrate de que `seed.seed` sea un array antes de compararlo
+        if (Array.isArray(scent.scent) && Array.isArray(typeScent)) {
+            return typeScent.every((param) => scent.scent.includes(param)); // Todos los valores de `typeSeed` deben estar en `seed.seed`
+        }
+        if (typeof scent.scent === "string" && typeof typeScent === "string") {
+            return scent.scent === typeScent; // Comparación directa para strings
         }
         return false;
     });
