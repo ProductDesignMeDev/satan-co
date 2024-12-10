@@ -37,7 +37,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
         
-        {process.env.NODE_ENV === 'production' && (
+        
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -53,7 +53,7 @@ export default function RootLayout({
               `,
             }}
           />
-        )}
+       
       </head>
       <body className="flex flex-col min-h-screen ">
         <Navbar />
