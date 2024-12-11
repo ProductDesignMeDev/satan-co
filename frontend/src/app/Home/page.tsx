@@ -7,9 +7,21 @@ import {
   HumoInicioDerecha,
   EllipseInicioDerecha,
   EllipseInicioIzquierda,
+  BannerCopaDelMar,
+  Testimonio1,
+  Testimonio2,
+  Testimonio3,
+  Testimonio4,
 } from "@/public";
 import Image from "next/image";
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Explora el Mundo del Cannabis | Inicio",
+  description:
+    "Explora el mundo del cannabis con información confiable sobre variedades, beneficios, cultivo y más. Descubre un espacio educativo y responsable para usuarios interesados en el cannabis",
+};
 
 export default function HomePage() {
   const cardsData = [
@@ -20,25 +32,25 @@ export default function HomePage() {
 
   const testimonyData = [
     {
-      image: "Imagen",
+      image: Testimonio1,
       name: "Emiliano Barrientos",
       testimonial:
         "“La web es intuitiva y me encanta poder explorar variedades y efectos de forma sencilla. ¡Muy útil y bien organizada!”",
     },
     {
-      image: "Imagen",
+      image: Testimonio2,
       name: "Leandro Brangi",
       testimonial:
         "“Me transmite confianza con su diseño profesional y la información clara sobre cada variedad. Excelente para aprender.”",
     },
     {
-      image: "Imagen",
+      image: Testimonio3,
       name: "Facundo Nuñez",
       testimonial:
         "“Las semillas germinaron rápidamente y las plantas crecieron fuertes; fue gratificante ver el proceso desde el inicio. ¡Muy recomendable!”",
     },
     {
-      image: "Imagen",
+      image: Testimonio4,
       name: "Adrián Sánchez",
       testimonial:
         "“Nunca pensé que cultivar sería tan fácil. Las semillas dieron plantas robustas y de calidad. Estoy muy satisfecho con el resultado.”",
@@ -46,9 +58,13 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="flex flex-col ">
-      <div className="w-full lg:h-[579px] h-[255px] bg-slate-300 pt-24 text-center flex justify-center items-center">
-        <p>Banner</p>
+    <div className="flex flex-col max-w-[1366px] mx-auto">
+      <div className="w-full lg:h-[579px] h-[255px] pt-24 text-center flex justify-center items-center">
+          <Image
+            src={BannerCopaDelMar}
+            alt="BannerCopaDelMar"
+            layout="responsive"
+          />
       </div>
 
       <div className=" ml-4 mr-4 lg:ml-24 lg:mr-24">
@@ -105,7 +121,7 @@ export default function HomePage() {
           Testimonios de clientes
         </h1>
         {/* Carrusel para mobile */}
-        <div className="lg:hidden">
+        <div className="lg:hidden flex items-center justify-center">
           <TestimonyCardCarousel testimonies={testimonyData} />
         </div>
 

@@ -1,4 +1,3 @@
-// app/ageverification/page.tsx
 "use client";
 
 import { useEffect } from "react";
@@ -33,7 +32,15 @@ const AgeVerification = () => {
   };
 
   return (
-    <div className="fixed inset-0 bg-background flex justify-center items-center text-white z-50">
+    <>
+    <head >
+        <title>Verificación de Edad | Acceso Restringido para Mayores de Edad</title>
+        <meta name="description" content="Acceso restringido para mayores de edad. Verifica tu edad para ingresar y explorar contenido sobre cannabis de forma segura y responsable." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+    
+    <div className="fixed inset-0 bg-background flex justify-center items-center text-white z-50 font-poppins">
+      <div className="">
       {/* Humos*/}
       <div className="absolute lg:top-14 top-4 left-0 justify-between">
         <div>
@@ -75,7 +82,7 @@ const AgeVerification = () => {
         </div>
       </div>
 
-      <div className="w-[310px] lg:w-[400px] h-[230px] lg:h-[258px] px-5 py-5 bg-[#e05bff]/20 rounded-[15px] border-2 border-[#e05bff] flex flex-col items-center justify-center text-center relative space-y-2">
+      <div className="w-[310px] lg:w-[400px] h-[280px] lg:h-[258px] px-5 py-5 bg-[#e05bff]/20 rounded-[15px] border-2 border-[#e05bff] flex flex-col items-center justify-center text-center relative space-y-2]">
         <Image src={Logo} alt="Logo" className="w-20 h-16" />
 
         <div className="flex flex-col items-center space-y-4">
@@ -84,7 +91,7 @@ const AgeVerification = () => {
             ¿Eres mayor de edad?
             </div>
             <div className="text-white text-lg font-normal leading-[25px]">
-              Para acceder, confirma que tienes más de 18 años.
+              Para acceder, confirma que tienes<br className="hidden lg:block" /> más de 18 años.
             </div>
           </div>
 
@@ -105,6 +112,8 @@ const AgeVerification = () => {
         </div>
       </div>
     </div>
+    </div>
+    </>
   );
 };
 

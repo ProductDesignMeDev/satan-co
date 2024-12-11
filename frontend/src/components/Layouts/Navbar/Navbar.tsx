@@ -50,7 +50,7 @@ export default function Navbar() {
           : isScrolled
           ? "lg:bg-opacity-60 lg:backdrop-blur-md bg-background"
           : "bg-background"
-      } text-white lg:h-24 h-16 fixed w-full transition-all duration-300 z-50 bg-background font-poppins`}
+      } text-white lg:h-24 h-16 fixed w-full transition-all duration-300 z-50 bg-background font-poppins font-semibold`}
     >
       <div className="flex items-center justify-between h-full lg:ml-24 lg:mr-24 px-4 lg:px-0">
         {/* Logo */}
@@ -63,7 +63,7 @@ export default function Navbar() {
             <Image
               src={Logo}
               alt="Logo"
-              className="lg:h-[70px] lg:w-24 w-14 h-10"
+              className=" lg:w-[89px] lg:h-[78px] w-[44px] h-[39px]"
             />
           </Link>
         </div>
@@ -139,6 +139,13 @@ export default function Navbar() {
         <div className="lg:hidden absolute lg:top-24 top-[63px] left-0 w-full bg-backgroundgradiant text-white flex flex-col space-y-4 py-6 text-left mt-[-1px]">
           <div className="ml-8 h-screen z-50 text-[32px] font-medium leading-10 flex flex-col space-y-4 pt-16">
             <Link
+              href="/Home"
+              className="hover:text-gray-400"
+              onClick={closeMenu}
+            >
+              Inicio
+            </Link>
+            <Link
               href="/Catalog"
               className="hover:text-gray-400"
               onClick={closeMenu}
@@ -167,16 +174,22 @@ export default function Navbar() {
               FAQ&apos;S {/* Comillas escapadas */}
             </Link>
             <div className="">
-              <div className="flex flex-row items-center mt-9 mb-5">
-                <Image
-                  src={IconInstagram}
-                  alt="NubeFooterDerecha"
-                  className="mr-2 mt-1 w-5 h-5"
-                />
-                <p className="text-sm font-normal leading-snug ">
-                  satanyco.genetics
-                </p>
-              </div>
+              <Link
+                href="https://www.instagram.com/satanyco.genetics/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="flex flex-row items-center mt-9 mb-5">
+                  <Image
+                    src={IconInstagram}
+                    alt="NubeFooterDerecha"
+                    className="mr-2 w-5 h-5"
+                  />
+                  <p className="text-sm font-normal leading-snug ">
+                    satanyco.genetics
+                  </p>
+                </div>
+              </Link>
               <p className="text-[10.67px] font-normal leading-none">
                 © 2024 Satan&Co X Product Design Me
               </p>

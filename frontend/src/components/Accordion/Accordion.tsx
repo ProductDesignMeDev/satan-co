@@ -23,7 +23,8 @@ const Accordion: FC<AccordionProps> = ({ title, answer }) => {
             alt="LogoCannabis"
             className="lg:w-12 lg:h-12 w-6 h-6"
           />
-          <span className="w-[1022px] text-justify text-white lg:text-lg text-xs font-medium leading-[27px]">
+          <span className="text-white lg:text-lg lg:font-medium lg:leading-[27px]
+          text-xs font-normal leading-[18px] lg:w-[1022px] text-left">
             {title}
           </span>
         </div>
@@ -55,7 +56,7 @@ const Accordion: FC<AccordionProps> = ({ title, answer }) => {
         </svg>
       </button>
       <div
-        className={`grid overflow-hidden transition-all duration-300 ease-in-out text-white text-sm mt-1 ${
+        className={`grid overflow-hidden transition-all duration-300 ease-in-out text-white mt-1 lg:ml-16 ml-10 text-[10px] front-light leading-[15px] lg:text-lg lg:leading-[27px] ${
           accordionOpen
             ? "grid-rows-[1fr] opacity-100"
             : "grid-rows-[0fr] opacity-0"
