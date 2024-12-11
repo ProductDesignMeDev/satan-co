@@ -22,7 +22,7 @@ export default function WhatsAppLink({
     <>
       <a
         onClick={() => setPopupOpen(true)}
-        className="fixed top-[450px] md:top-[552px] right-[14px] transform -translate-y-1/2 z-60 md:right-13 lg:right-8 cursor-pointer"
+        className="fixed top-[500px] md:top-[552px] right-[5px] transform -translate-y-1/2 z-60 md:right-13 lg:right-8 cursor-pointer"
       >
         <Image src={Whatsapp} alt={altText} width={60} height={60} />
       </a>
