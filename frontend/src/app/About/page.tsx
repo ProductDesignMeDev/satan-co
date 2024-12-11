@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Metadata } from "next";
 import { HumoQuienes1, HumoQuienes2, EllipseInicioIzquierda, EllipseInicioDerecha } from "@/public";
-import { AboutSection } from "@/components";
+{/*import { AboutSection } from "@/components"; */}
 
 export const metadata: Metadata = {
   title: "Conoce Nuestro Equipo | Expertos en el Mundo del Cannabis",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="relative flex flex-col items-center justify-center space-y-7 mt-2 sm:mt-36 text-center py-12 px-4 sm:px-0">
+    <div className="relative flex flex-col items-center justify-center space-y-7 mt-14 sm:mt-0 text-center py-2 sm:py-80 px-4 sm:px-0">
       <div className="ml-4 mr-4 lg:ml-24 lg:mr-24">
         <div>
           <div>
@@ -70,7 +70,7 @@ export default function About() {
           />
         </div>
       </div>
-      <AboutSection />
+      {/*<AboutSection /> */}
     </div>
   );
 }
