@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { PrizeCard } from "@/components";
 import { CopaMar, CopaHumo, Flechadere, FlechaIzque } from "@/public";
@@ -43,6 +43,25 @@ export default function AwardsCards() {
       setSelectedIndex((prevIndex) => prevIndex + 1);
     }
   };
+
+  // Manejo del teclado
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowLeft") {
+        handleLeftClick();
+      } else if (event.key === "ArrowRight") {
+        handleRightClick();
+      }
+    };
+
+    // Agregar el listener al cargar el componente
+    window.addEventListener("keydown", handleKeyDown);
+
+    // Eliminar el listener al desmontar el componente
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedIndex]); // Re-registrar el evento si selectedIndex cambia
 
   return (
     <div className="w-full max-w-[1194px] h-[458px] mx-auto flex flex-col sm:flex-row justify-center items-center rounded-lg relative p-4">

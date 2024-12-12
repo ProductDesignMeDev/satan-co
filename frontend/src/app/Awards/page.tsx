@@ -31,7 +31,7 @@ export default function Awards() {
         </div>
       </div>
       <div className="w-full sm:w-[574px] h-auto sm:h-[60px] mx-auto mt-1 sm:mt-[108px]">
-        <h2 className="text-[20px] sm:text-[40px] font-poppins text-white sm:text-center sm:ml-0 ml-4 text-left">
+        <h2 className="text-[20px] sm:text-[40px] font-freckle text-primary4 sm:text-center sm:ml-0 ml-4 text-left">
           Premios y Reconocimientos
         </h2>
       </div>
