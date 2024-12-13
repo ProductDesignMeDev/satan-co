@@ -2,7 +2,7 @@ import seeds from "@/utils/seeds.json"
 
 //Trae un producto mediante el uso de su id
 export function getSeed(id: string) {
-    const data = seeds.filter((seed) => seed.id.toString() === id.toString())
+    const data = seeds.filter((seed) => seed.id === id)
     return data
 }
 

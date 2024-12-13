@@ -32,7 +32,7 @@ export enum PLACE {
 
 export interface ProductProps {
     id: string;
-    title: string | string[];
+    title: string;
     seed: string[]; 
     scent: string[];
     THC: string;

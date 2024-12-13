@@ -19,7 +19,7 @@ export default function DetailComponent(props: DetailProps) {
     useEffect(() => {
         const data = getSeed(props.params.id);
         setProduct(data);
-    }, [props.params.id]);  // Add `id` as a dependency to re-fetch when it changes
+    }, [props.params.id]);
 
     useEffect(() => {
         if (product && product.length > 0) {
