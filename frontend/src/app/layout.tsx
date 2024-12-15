@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation"; // Importar usePathname
 import "./globals.css";
 import { Footer, Navbar, WhatsAppLink } from "@/components";
-
+import { favicon } from "@/public";
 
 
 export default function RootLayout({
@@ -25,20 +25,22 @@ export default function RootLayout({
     }
   }, [router, pathname]);
 
+
   return (
     <html lang="en">
       <head>
-        
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Space+Grotesk:wght@300..700&display=swap"
           rel="stylesheet"
         />
-        
-        
-           {process.env.NODE_ENV === 'production' && (
+        <link rel="icon" type="image/png" href={favicon.src} />
+
+
+        {process.env.NODE_ENV === 'production' && (
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -55,14 +57,14 @@ export default function RootLayout({
             }}
           />
         )}
-       
+
       </head>
       <body className="flex flex-col min-h-screen ">
         <Navbar />
         <main className="flex-1" >{children}</main>
         <Footer />
-        <WhatsAppLink 
-          phoneNumber="+5492235837103" 
+        <WhatsAppLink
+          phoneNumber="+5492235837103"
           message="¡Hola! Me gustaría obtener más información."
         />
       </body>

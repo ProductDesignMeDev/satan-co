@@ -7,7 +7,7 @@ export async function generateMetadata(props : DetailProps): Promise<Metadata> {
     
 
     console.log(props)
-    const productTitle = props?.searchParams?.title; // Ajusta según tu lógica para obtener el título
+    const productTitle = props?.searchParams?.title;
     const productDescription = props?.searchParams?.description;
     const productSeed = props?.searchParams?.seed
     ? Array.isArray(props.searchParams.seed)

@@ -26,3 +26,5 @@ export { default as FilterBar } from "./FilterBar/FilterBar";
 
 export { default as CatalogComponent } from "./CatalogComponents/Catalog"
 export { default as DetailComponent } from "./CatalogComponents/Detail"
+export { default as Spinner } from "./ui/Spinner"
+export { default as GoToDetail } from "./ui/GoToDetail"

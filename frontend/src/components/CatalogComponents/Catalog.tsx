@@ -1,7 +1,7 @@
 "use client"
 
 // import { Metadata } from "next";
-import { Wrapper } from "@/components";
+import { Spinner, Wrapper } from "@/components";
 import { ProductCard } from "@/components";
 import { FilterBar } from "@/components";
 import seeds from "@/utils/seeds.json";
@@ -50,6 +50,14 @@ export default function CatalogComponent() {
     const hiddenFilters = () => {
         setIsVisible(!isVisible)
     }
+
+        if (!filteredProducts) {
+            return (
+                <div className="flex items-center justify-center lg:w-[100%] lg:h-[768px] md:w-[100%] md:h-[768px] w-[100%] h-[800px]">
+                    <Spinner size="100" colorText="#FAFAFA" />
+                </div>
+            );
+        }
     return (
         < Wrapper >
             <div className="grid md:grid-cols-12 align-center gap-4 justify-center">
