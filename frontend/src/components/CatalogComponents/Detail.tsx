@@ -6,15 +6,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from "react";
 import { ProductProps } from "@/types";
-import { Wrapper } from "@/components";
+import { Spinner, Wrapper } from "@/components";
 import ProductCard from "@/components/Cards/ProductCard/ProductCard";
 import { chevron } from "@/public";
-import  seeds  from "@/utils/seeds.json";
+import seeds from "@/utils/seeds.json";
 
 export default function DetailComponent(props: DetailProps) {
 
     const [product, setProduct] = useState<ProductProps[] | null>(null);
     const [relatedProducts, setRelatedProducts] = useState<ProductProps[] | null>(null);
+
 
     useEffect(() => {
         const data = getSeed(props.params.id);
@@ -23,24 +24,24 @@ export default function DetailComponent(props: DetailProps) {
 
     useEffect(() => {
         if (product && product.length > 0) {
-            const seedType = product[0].seed; 
+            const seedType = product[0].seed;
             const scentType = product[0].scent;
             if (seedType) {
                 let data1 = recommendingProductBySeed(seedType);
                 let data2 = recommendingProductBySeed(seedType);
-                if ( data1.title === product[0].title){
+                if (data1.title === product[0].title) {
                     data1 = recommendingProductByScent(scentType)
                 }
-                while(data1.title === product[0].title){
+                while (data1.title === product[0].title) {
                     data1 = seeds[Math.floor(Math.random() * seeds.length)];
                 }
-                while(data1 === data2 || data2.title === product[0].title){
+                while (data1 === data2 || data2.title === product[0].title) {
                     data2 = seeds[Math.floor(Math.random() * seeds.length)]
                 }
                 let data3 = null;
                 if (window.innerWidth > 600) {
                     data3 = seeds[Math.floor(Math.random() * seeds.length)];
-                    while(data3 === data1 || data3 === data2){
+                    while (data3 === data1 || data3 === data2) {
                         data3 = seeds[Math.floor(Math.random() * seeds.length)];
 
                     }
@@ -56,8 +57,8 @@ export default function DetailComponent(props: DetailProps) {
 
     if (!product) {
         return (
-            <div>
-                <h3 className="bg-white">Loading...</h3>
+            <div className="flex items-center justify-center lg:w-[100%] lg:h-[768px] md:w-[100%] md:h-[768px] w-[100%] h-[800px]">
+                <Spinner size="100" colorText="#FAFAFA" />
             </div>
         );
     }
@@ -120,14 +121,20 @@ export default function DetailComponent(props: DetailProps) {
                         </div>
                         {/* Product Image */}
                         <section className="w-[328px] flex-shrink lg:w-[474px] lg:h-[725px] lg:flex flex-col lg:order-1 lg:mr-32 mt-4">
-                            <div className="relative w-[328px] h-[332px] lg:w-[474px] lg:h-[480px]  overflow-hidden">
-                                <Image
-                                    src={product[0].image || "/default-image.jpg"}
-                                    alt={product[0].title.toString()}
-                                    layout="fill"
-                                    className="object-cover sm:rounded-3xl rounded-xl border-4 border-textColor1 bg-borderpinkgradient bg-clip-border border-transparent"
-                                />
-                            </div>
+                            {product[0].image === null ?
+                                <div className="flex items-center justify-center lg:w-[375px] lg:h-[360px] md:w-[275px] md:h-[220px] w-[156px] h-[133px]">
+                                    <Spinner size="100" />
+                                </div>
+                                :
+                                <div className="relative w-[328px] h-[332px] lg:w-[474px] lg:h-[480px]  overflow-hidden">
+                                    <Image
+                                        src={product[0].image || "/default-image.jpg"}
+                                        alt={product[0].title.toString()}
+                                        layout="fill"
+                                        className="object-cover sm:rounded-3xl rounded-xl border-4 border-textColor1 bg-borderpinkgradient bg-clip-border border-transparent"
+                                    />
+                                </div>
+                            }
                             <article className="mt-4 lg:mt-8">
                                 <h3 className="text-lg lg:text-xl font-normal lg:leading-6 ">Detalle del producto</h3>
                                 <p className="text-xs lg:text-sm font-light lg:text-base lg:leading-6 leading-5 mt-1 lg:mt-2">{product[0].description}</p>

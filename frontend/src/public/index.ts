@@ -10,6 +10,7 @@ export { default as Testimonio1 } from "./Testimonio1.svg";
 export { default as Testimonio2 } from "./Testimonio2.svg";
 export { default as Testimonio3 } from "./Testimonio3.svg";
 export { default as Testimonio4 } from "./Testimonio4.svg";
+export { default as favicon } from "./Favicon-Satanycogenetics-96px.png";
 
 
 //Age verification
