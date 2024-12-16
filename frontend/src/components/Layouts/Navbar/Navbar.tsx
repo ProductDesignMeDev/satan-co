@@ -175,7 +175,7 @@ export default function Navbar() {
             </Link>
             <div className="">
               <Link
-                href="https://www.instagram.com/satanyco.genetics/"
+                href="https://www.instagram.com/satanycogenetics/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
