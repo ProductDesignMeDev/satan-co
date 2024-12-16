@@ -8,6 +8,9 @@ import {
   HumoFooterDerechaPNG,
   HumoFooterIzquierdaPNG,
   Fuegofooter300Pgn,
+  FuegofooterCentro,
+  FuegofooterDerecha,
+  FuegofooterIzquierda,
 } from "@/public";
 import Link from "next/link";
 
@@ -49,7 +52,7 @@ export default function Footer() {
             </p>
           </div>
           <Link
-            href="https://www.instagram.com/satanyco.genetics/"
+            href="https://www.instagram.com/satanycogenetics/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -73,8 +76,14 @@ export default function Footer() {
         <Image
           src={Fuegofooter300Pgn}
           alt="Logo"
-          className="lg:w-[1366px] lg:h-[138px]"
+          className="lg:w-[1366px] lg:h-[138px] 2xl:hidden block"
         />
+        <div className=" lg:hidden hidden 2xl:flex 2xl:flex-row 2xl:justify-between 2xl:w-screen">
+          <Image src={FuegofooterIzquierda} alt="Logo" className="w-[455px]" />
+          <Image src={FuegofooterCentro} alt="Logo" className="w-[900px]" />
+          <Image src={FuegofooterDerecha} alt="Logo" className="w-[455px]" />
+          
+        </div>
       </div>
     </footer>
   );

@@ -62,6 +62,10 @@ export { default as FuegoFooterPNG } from "./FuegoFooter.png";
 //--------
 export { default as Fuegofooter300Pgn } from "./Fuegofooter300.png";
 export { default as Fuegofooter300Svg } from "./Fuegofooter300.svg";
+//--------
+export { default as FuegofooterCentro } from "./FuegofooterCentro.png";
+export { default as FuegofooterDerecha } from "./FuegofooterDerecha.png";
+export { default as FuegofooterIzquierda } from "./FuegofooterIzquierda.png";
 
 //Iconos
 export { default as IconInstagram } from "./IconInstagram.svg";

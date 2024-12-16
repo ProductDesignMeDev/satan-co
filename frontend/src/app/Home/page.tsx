@@ -1,8 +1,5 @@
 import { HomeCard, TestimonyCard, TestimonyCardCarousel } from "@/components";
 import {
-  SpicyBanana,
-  MoonCake,
-  SunsetFire,
   HumoInicioIzquierda,
   HumoInicioDerecha,
   EllipseInicioDerecha,
@@ -25,33 +22,45 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const cardsData = [
-    { imageSrc: MoonCake, title: "Spicy Banana" },
-    { imageSrc: SpicyBanana, title: "Spicy Banana" },
-    { imageSrc: SunsetFire, title: "Sunset Fire" },
+    {
+      imageSrc:
+        "https://res.cloudinary.com/dp59p3lfo/image/upload/v1731532559/satanico-Semilla-foto-fem-Bud%C3%ADn-2.jpg",
+      title: "Spicy Banana",
+    },
+    {
+      imageSrc:
+        "https://res.cloudinary.com/dp59p3lfo/image/upload/v1733776592/Semilla-foto-fem-Bud%C3%ADn-1_e5qfva.jpg",
+      title: "Budín",
+    },
+    {
+      imageSrc:
+        "https://res.cloudinary.com/dp59p3lfo/image/upload/v1733777873/SunsetFire_ivlhtg.jpg",
+      title: "Sunset Fire",
+    },
   ];
 
   const testimonyData = [
     {
       image: Testimonio1,
-      name: "Emiliano Barrientos",
+      name: "Carlos Ramírez",
       testimonial:
         "“La web es intuitiva y me encanta poder explorar variedades y efectos de forma sencilla. ¡Muy útil y bien organizada!”",
     },
     {
       image: Testimonio2,
-      name: "Leandro Brangi",
+      name: "Luis Fernández",
       testimonial:
         "“Me transmite confianza con su diseño profesional y la información clara sobre cada variedad. Excelente para aprender.”",
     },
     {
       image: Testimonio3,
-      name: "Facundo Nuñez",
+      name: "Andrés Martínez",
       testimonial:
         "“Las semillas germinaron rápidamente y las plantas crecieron fuertes; fue gratificante ver el proceso desde el inicio. ¡Muy recomendable!”",
     },
     {
       image: Testimonio4,
-      name: "Adrián Sánchez",
+      name: "Javier Gómez",
       testimonial:
         "“Nunca pensé que cultivar sería tan fácil. Las semillas dieron plantas robustas y de calidad. Estoy muy satisfecho con el resultado.”",
     },
@@ -59,12 +68,12 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col max-w-[1366px] mx-auto">
-      <div className="w-full lg:h-[579px] h-[255px] pt-24 text-center flex justify-center items-center">
-          <Image
-            src={BannerCopaDelMar}
-            alt="BannerCopaDelMar"
-            layout="responsive"
-          />
+      <div className="w-full lg:h-[579px] h-[255px] lg:pt-32 pt-16 text-center flex justify-center items-center">
+        <Image
+          src={BannerCopaDelMar}
+          alt="BannerCopaDelMar"
+          layout="responsive"
+        />
       </div>
 
       <div className=" ml-4 mr-4 lg:ml-24 lg:mr-24">
