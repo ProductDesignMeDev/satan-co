@@ -152,3 +152,8 @@ body{
   font-weight: 900;
   font-style: italic;
 }
+
+.zoom-card {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
