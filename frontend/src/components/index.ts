@@ -4,6 +4,8 @@ export { default as Navbar } from "./Layouts/Navbar/Navbar";
 export { default as Footer } from "./Layouts/Footer/Footer";
 export { default as WhatsAppLink } from "./Layouts/WhatsAppLink/WhatsAppLink";
 
+export { default as ScrollToTop } from "./ScrollToTop/ScrollToTop";
+
 //Exportaciones Card
 export { default as HomeCard } from "./Cards/HomeCard/HomeCard";
 export { default as TestimonyCard } from "./Cards/TestimonyCard/TestimonyCard";
